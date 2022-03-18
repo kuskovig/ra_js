@@ -15,6 +15,10 @@ html {
 a {
   color: #278aff;
 }
+
+ul {
+  list-style-type: none;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -26,20 +30,21 @@ a {
 }
 
 .header {
-  background: #f8f6f7 url("../content/header_bg.png");
+  background: #f8f6f7 url("../content/images/header_bg.png");
   overflow: hidden;
 }
 
 .header__container {
   display: flex;
   flex-direction: column;
-  margin: 30px 165px 136px 163px;
+  margin: 30px 165px 230px 163px;  /*163 bottom*/
 }
 
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom:120px;  /*for girl*/
 }
 
 .header__top .logo {
@@ -66,16 +71,65 @@ a {
   font-size: 18px;
 }
 
+.header__sign h1{
+  max-width: 493px;
+  font-weight: 600;
+  margin:0px;
+  padding:5px 0px;
+
+}
+
+.header__sign h1,
+.main__container h1 {
+  font-size: 48px;
+}
+.header__sign span {
+  font-size:20px;
+}
+
+
+button.sign_up {
+  border-radius: 24px;
+  background-color:#FB9475;
+  color:white;
+  font-size:14px;
+  padding:17px 30px;
+  border:0px;
+}
+
+button.sign_up:hover {
+  cursor: pointer;
+  filter:brightness(110%)
+}
+
+button.sign_up:active {
+  filter:brightness(85%);
+}
+
+
+
 .header__content {
   display: flex;
   justify-content: space-between;
+  align-items:center;
 }
+
 
 .header__sign nav ul {
   display: flex;
   flex-direction: column;
 }
 
+.header__girl {
+  top:80px;
+  left:658px;
+  position:absolute;
+}
+
+
+.main__container {
+  margin: 0px 165px;
+}
 /* FOOTER STYLES */
 
 .footer__container {
@@ -94,7 +148,8 @@ a {
   margin-top: 8px;
 }
 
-nav ul {
+.header__top ul,
+.footer__menu ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -107,6 +162,6 @@ nav ul {
   text-decoration: none;
 }
 
-nav li:not(:nth-last-child(1)) {
+nav.links li:not(:nth-last-child(1)) {
   margin-right: 28px;
 }
