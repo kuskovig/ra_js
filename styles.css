@@ -34,17 +34,16 @@ ul {
   overflow: hidden;
 }
 
-.header__container {
+.header {
   display: flex;
   flex-direction: column;
-  margin: 30px 165px 230px 163px;  /*163 bottom*/
+  padding: 30px 165px 0px 163px; /*163 bottom*/
 }
 
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom:120px;  /*for girl*/
 }
 
 .header__top .logo {
@@ -64,19 +63,22 @@ ul {
   display: flex;
   flex-direction: column;
   text-align: end;
-  font-size: 14px;
+  font-size: 11px;
 }
 .header__top .contacts a {
   font-weight: 500;
   font-size: 18px;
 }
 
-.header__sign h1{
+.header__sign h1 {
   max-width: 493px;
   font-weight: 600;
-  margin:0px;
-  padding:5px 0px;
+  margin: 0px;
+  padding: 5px 0px;
+}
 
+.header__social li:not(:nth-last-child(1)) {
+  margin-bottom: 20px;
 }
 
 .header__sign h1,
@@ -84,48 +86,57 @@ ul {
   font-size: 48px;
 }
 .header__sign span {
-  font-size:20px;
+  font-size: 20px;
 }
-
 
 button.sign_up {
   border-radius: 24px;
-  background-color:#FB9475;
-  color:white;
-  font-size:14px;
-  padding:17px 30px;
-  border:0px;
+  background-color: #fb9475;
+  color: white;
+  font-size: 14px;
+  padding: 17px 30px;
+  border: 0px;
 }
 
 button.sign_up:hover {
   cursor: pointer;
-  filter:brightness(110%)
+  filter: brightness(110%);
 }
 
 button.sign_up:active {
-  filter:brightness(85%);
+  filter: brightness(85%);
 }
-
-
 
 .header__content {
   display: flex;
   justify-content: space-between;
-  align-items:center;
-}
-
-
-.header__sign nav ul {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .header__girl {
-  top:80px;
-  left:658px;
-  position:absolute;
+  position:relative;
 }
 
+
+.header__girl img {
+  position:relative;
+  display:block;
+  z-index:10;
+}
+.header__girl::before {
+  content: '';
+  background: #FB9475;
+  position: absolute;
+  width: 472px;
+  height: 472px;
+  left: 9.6%;
+  top: 28.2%;
+  border-radius: 50%;
+}
+
+.header__content p {
+  margin: 17px 0px 59px 0px;
+}
 
 .main__container {
   margin: 0px 165px;
