@@ -2,6 +2,12 @@ html {
   box-sizing: border-box;
 }
 
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  margin:auto;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -209,7 +215,7 @@ button.sign_up:active {
 
 /* FOOTER STYLES */
 
-.footer__container {
+.footer__content {
   margin: 20px 165px;
   display: flex;
   justify-content: space-between;
