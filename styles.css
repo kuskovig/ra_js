@@ -5,7 +5,7 @@ html {
 .container {
   min-width: 320px;
   max-width: 1200px;
-  margin:auto;
+  margin: auto;
 }
 
 body {
@@ -178,9 +178,48 @@ button.sign_up:active {
 }
 
 .main__video-container {
-  width: 445px;
-  height: 296px;
-  background: url("../content/images/video_placeholder.png");
+  border-radius: 10px;
+  position: relative;
+  max-width: 445px;
+  min-width: 297px;
+  width: 100%;
+  height: 297px;
+  background: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80")
+    no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.video_overlay {
+  position: absolute;
+  background: #000;
+  opacity: 0.2;
+  inset: 0;
+}
+
+.main__video-container::after {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: url("./content/images/play.svg");
+  transition: 0.2s;
+}
+
+.main__video-container::before {
+  position: absolute;
+  content: "Короткое видео о нас";
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+  top: 168px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.main__video-container:hover::after {
+  transform: scale(1.2) translateX(-40%);
 }
 
 .main__perks {
