@@ -3,7 +3,6 @@ html {
 }
 
 .container {
-  min-width: 320px;
   max-width: 1200px;
   margin: auto;
 }
@@ -12,10 +11,11 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #333;
+  min-width: 320px;
 }
 body,
 html {
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 a {
@@ -30,7 +30,7 @@ ul {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .main {
