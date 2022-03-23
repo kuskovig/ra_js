@@ -220,6 +220,7 @@ button.sign_up:active {
 
 .main__video-container:hover::after {
   transform: scale(1.2) translateX(-40%);
+  cursor: pointer;
 }
 
 .main__perks {
