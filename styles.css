@@ -168,7 +168,7 @@ h1 {
   padding: 93px 165px 0px 165px;
 }
 
-.main__about {
+.about-us__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -267,7 +267,7 @@ h1 {
   line-height: 22px;
 }
 
-.perk-item__description h4 {
+.perk-item__title {
   margin: 30px 0px 12px 0px;
   font-size: 18px;
   font-weight: 600;
@@ -277,7 +277,7 @@ h1 {
   max-width: 350px;
 }
 
-.perk-item img {
+.perk-item__icon {
   display: block;
   margin: auto;
 }
