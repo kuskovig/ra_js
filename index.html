@@ -21,14 +21,14 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container">
+        <div class="container header__container">
           <div class="header__top">
             <a class="logo" href="/">Мир Красоты</a>
 
             <nav class="links">
               <ul class="links__list">
-                <li class="links__item"><a href="#masters">Мастера</a></li>
                 <li class="links__item"><a href="#prices">Услуги и цены</a></li>
+                <li class="links__item"><a href="#masters">Мастера</a></li>
                 <li class="links__item">
                   <a href="#portfolio">Наши работы</a>
                 </li>
@@ -41,39 +41,37 @@
               <span>с 10.00 до 19.00 без выходных</span>
             </div>
           </div>
-          <div class="header__content">
-            <div class="header__sign">
-              <h1>Создай свой образ вместе с нами</h1>
-              <p>Идеальный образ за 60 минут</p>
-              <button class="sign_up">Записаться онлайн</button>
-            </div>
-            <div class="header__girl">
-              <img src="../content/images/girl.png" alt="girl_face" />
-            </div>
-            <nav class="header__social">
-              <ul>
-                <li>
-                  <a href="https://vk.com" target="_blank">
-                    <img src="../content/images/vk.png" alt="Vk"
-                  /></a>
-                </li>
-                <li>
-                  <a href="https://instagram.com" target="_blank">
-                    <img src="../content/images/instagram.png" alt="Instagram"
-                  /></a>
-                </li>
-                <li>
-                  <a href="https://youtube.com" target="_blank">
-                    <img src="../content/images/youtube.png" alt="Youtube" />
-                  </a>
-                </li>
-              </ul>
-            </nav>
+          <div class="sign header__sign">
+            <h1 class="sign__title">Создай свой образ вместе с нами</h1>
+            <p class="sign__subtitle">Идеальный образ за 60 минут</p>
+            <button class="btn btn_large">Записаться онлайн</button>
           </div>
+          <div class="header__girl">
+            <img src="../content/images/girl.png" alt="girl_face" />
+          </div>
+          <nav class="header__social social social_vertical">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="https://vk.com" target="_blank">
+                  <img src="../content/images/vk.png" alt="Vk"
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="https://instagram.com" target="_blank">
+                  <img src="../content/images/instagram.png" alt="Instagram"
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="https://youtube.com" target="_blank">
+                  <img src="../content/images/youtube.png" alt="Youtube" />
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
       <main class="main">
-        <div class="container">
+        <div class="container main__container">
           <h1 id="about_us">О Салоне</h1>
           <div class="main__about">
             <div class="main__description">
@@ -216,7 +214,7 @@
         </div>
       </main>
       <footer class="footer">
-        <div class="container">
+        <div class="container footer__container">
           <div class="footer__content">
             <div class="footer__info">
               © 2020 «Море красоты»
@@ -224,12 +222,14 @@
                 >Политика конфиденциальности</a
               >
             </div>
-            <nav class="footer__menu links">
-              <ul>
-                <li><a href="#prices">Услуги и цены</a></li>
-                <li><a href="#masters">Мастера</a></li>
-                <li><a href="#portfolio">Наши работы</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+            <nav class="links">
+              <ul class="links__list">
+                <li class="links__item"><a href="#prices">Услуги и цены</a></li>
+                <li class="links__item"><a href="#masters">Мастера</a></li>
+                <li class="links__item">
+                  <a href="#portfolio">Наши работы</a>
+                </li>
+                <li class="links__item"><a href="#contacts">Контакты</a></li>
               </ul>
             </nav>
           </div>

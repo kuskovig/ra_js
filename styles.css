@@ -21,6 +21,7 @@ html {
 }
 
 a {
+  color: #333;
   text-decoration: none;
 }
 
@@ -30,10 +31,17 @@ ul {
   margin: 0px;
 }
 
+h1 {
+  font-size: 48px;
+}
 .container {
   max-width: 1200px;
   margin: auto;
-  padding-top: 30px;
+  position: relative;
+}
+
+.header__container {
+  padding: 30px 0px 130px;
 }
 
 .wrapper {
@@ -57,7 +65,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 6px;
+  margin-bottom: 120px;
 }
 
 .header__top .logo {
@@ -70,21 +78,21 @@ ul {
   font-weight: 500;
 }
 
-.header__top ul a:hover {
+.links__item a:hover {
   color: #00bf78;
 }
-.header__top .contacts {
+.contacts {
   display: flex;
   flex-direction: column;
   text-align: end;
   font-size: 11px;
 }
-.header__top .contacts a {
+.contacts a {
   font-weight: 500;
   font-size: 18px;
 }
 
-.header__sign h1 {
+.sign__title {
   max-width: 493px;
   font-weight: 600;
   margin: 0px;
@@ -93,7 +101,8 @@ ul {
 
 .header__social {
   position: absolute;
-  top: 145px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0px;
 }
 
@@ -101,43 +110,41 @@ ul {
   margin-bottom: 20px;
 }
 
-.header__sign h1,
-.main__container h1 {
-  font-size: 48px;
+.social__item a:hover {
+  filter: opacity(40%);
 }
-.header__sign span {
+
+.sign__subtitle {
   font-size: 20px;
 }
 
-button.sign_up {
+.btn {
   border-radius: 24px;
   background-color: #fb9475;
   color: white;
-  font-size: 14px;
-  padding: 17px 30px;
   border: 0px;
+  text-align: center;
 }
 
-button.sign_up:hover {
+.btn_large {
+  height: 48px;
+  width: 203px;
+  font-size: 14px;
+}
+
+.btn:hover {
   cursor: pointer;
   filter: brightness(110%);
 }
 
-button.sign_up:active {
+.btn:active {
   filter: brightness(85%);
 }
 
-.header__content {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 20px;
-  padding-right: 91px;
-}
-
 .header__girl {
-  position: relative;
+  position: absolute;
+  top: 81px;
+  right: 93px;
 }
 
 .header__girl img {
@@ -154,10 +161,6 @@ button.sign_up:active {
   left: 9.6%;
   top: 28.2%;
   border-radius: 50%;
-}
-
-.header__content p {
-  margin: 17px 0px 59px 0px;
 }
 
 .main {
@@ -182,15 +185,15 @@ button.sign_up:active {
 }
 
 .main__video-container {
-  border-radius: 10px;
+  border-radius: 8px;
   position: relative;
   max-width: 445px;
   min-width: 297px;
   width: 100%;
   height: 297px;
-  background: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80")
-    no-repeat;
+  background: url("./content/images/video_placeholder.png") no-repeat;
   background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -208,6 +211,7 @@ button.sign_up:active {
   transform: translateX(-50%);
   content: url("./content/images/play.svg");
   transition: 0.2s;
+  z-index: 2;
 }
 
 .main__video-container::before {
@@ -220,6 +224,7 @@ button.sign_up:active {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  z-index: 2;
 }
 
 .main__video-container:hover::after {
@@ -259,10 +264,14 @@ button.sign_up:active {
 
 /* FOOTER STYLES */
 
+.footer__container {
+  padding: 20px 0px;
+}
+
 .footer__content {
-  margin: 20px 165px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 12px;
 }
 
@@ -272,23 +281,16 @@ button.sign_up:active {
 }
 
 .footer__info a {
-  margin-top: 8px;
+  color: #278aff;
+  text-decoration: underline;
 }
 
-.header__top ul,
-.footer__menu ul {
-  list-style-type: none;
+.links__list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.footer__menu a,
-.header__top a {
-  color: #333;
-  text-decoration: none;
-}
-
-nav.links li:not(:nth-last-child(1)) {
+.links__list .links__item:not(:nth-last-child(1)) {
   margin-right: 28px;
 }
