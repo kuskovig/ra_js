@@ -177,7 +177,7 @@ ul {
 
 .about-us__content {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -289,26 +289,37 @@ ul {
   margin: auto;
 }
 
-.services__content {
+.services__content,
+.masters__content {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   gap: 50px;
 }
 
-.services-item {
+.services-item,
+.master-item {
   max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.services-item__pic {
-  max-width: 100%;
-  object-fit: cover;
+.master-item_narrow {
+  max-width: 255px;
 }
 
-.services-item__title {
+.services-item__pic,
+.master-item__pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  border-radius: 8px;
+}
+
+.services-item__title,
+.master-item__title {
   font-weight: 600;
   font-size: 18px;
   margin: 20px 0px 8px 0px;
@@ -317,6 +328,43 @@ ul {
 .services-item__text {
   font-size: 12px;
   line-height: 20px;
+}
+
+.master-item__text {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.master-item__experience {
+  font-size: 12px;
+  font-weight: 300;
+}
+.master-item__picture-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.master-item__picture-container:hover::before {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  opacity: 0.5;
+  inset: 0;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.master-item__picture-container:hover::after {
+  position: absolute;
+  content: "Записаться к мастеру";
+  color: white;
+  font-size: 14px;
+  line-height: 17px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
 }
 
 /* FOOTER STYLES */
