@@ -79,7 +79,7 @@ ul {
   font-weight: 500;
 }
 
-.links__item a:hover {
+li a:hover {
   color: #00bf78;
 }
 .contacts {
@@ -333,6 +333,49 @@ ul {
   line-height: 20px;
 }
 
+.prices__navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.prices__table {
+  display: none;
+  margin-top: 50px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.prices__table.active-table {
+  display: flex;
+}
+.prices__item {
+  min-width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.prices__title {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.prices__subtitle {
+  font-size: 14px;
+}
+
+.prices__price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00bf78;
+}
+
+.prices__link-item.active-item a {
+  text-decoration: underline;
+  color: #00bf78;
+}
+
 .master-item__text {
   font-size: 14px;
   line-height: 17px;
@@ -478,6 +521,6 @@ ul {
   justify-content: space-between;
 }
 
-.links__list .links__item:not(:nth-last-child(1)) {
+.links__item:not(:nth-last-child(1)) {
   margin-right: 28px;
 }
