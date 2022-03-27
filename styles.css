@@ -146,7 +146,8 @@ ul {
   filter: brightness(110%);
 }
 
-.btn:active {
+.btn:active,
+.portfolio__btn:active {
   filter: brightness(85%);
 }
 
@@ -379,6 +380,41 @@ ul {
   transition: 0.2s;
 }
 
+.portfolio__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.portfolio__navigate-buttons {
+  margin-top: 100px;
+}
+
+.portfolio__btn {
+  cursor: pointer;
+  background-color: white;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0px;
+}
+.portfolio__btn.left {
+  margin-right: 16px;
+  background-image: url("./content/images/button-left.svg");
+}
+.portfolio__btn.right {
+  background-image: url("./content/images/button-right.svg");
+}
+
+.portfolio__btn:hover {
+  background-color: #f8f6f7;
+}
+
 .portfolio-item__pic {
   max-width: 338px;
 }
@@ -388,6 +424,7 @@ ul {
 }
 
 /*TODO Не знаю как сделать во всю ширину экрана, в текущем способе есть горизонтальный скролл и отступ от края больше чем в макете*/
+/*И при увеличениии размера экрана тоже растягивается :(*/
 .portfolio__content {
   width: 100vw;
   position: relative;
