@@ -126,6 +126,7 @@ ul {
   color: white;
   border: 0px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .btn_large {
@@ -310,7 +311,8 @@ ul {
 }
 
 .services-item__pic,
-.master-item__pic {
+.master-item__pic,
+.portfolio-item__pic {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -339,12 +341,14 @@ ul {
   font-size: 12px;
   font-weight: 300;
 }
-.master-item__picture-container {
+.master-item__picture-container,
+.portfolio-item {
   position: relative;
   cursor: pointer;
 }
 
-.master-item__picture-container:hover::before {
+.master-item__picture-container:hover::before,
+.portfolio-item:hover::before {
   position: absolute;
   content: "";
   background-color: #000;
@@ -354,7 +358,8 @@ ul {
   z-index: 2;
 }
 
-.master-item__picture-container:hover::after {
+.master-item__picture-container::after {
+  visibility: hidden;
   position: absolute;
   content: "Записаться к мастеру";
   color: white;
@@ -364,6 +369,46 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  z-index: 3;
+}
+
+.master-item__picture-container:hover::after,
+.portfolio-item:hover::after {
+  visibility: visible;
+  transform: scale(1.2) translateX(-40%) translateY(-40%);
+  transition: 0.2s;
+}
+
+.portfolio-item__pic {
+  max-width: 338px;
+}
+.portfolio-item:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+/*TODO Не знаю как сделать во всю ширину экрана, в текущем способе есть горизонтальный скролл и отступ от края больше чем в макете*/
+.portfolio__content {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/*TODO не знаю как сделать тень + текст + иконку поиска по ховеру, получается только что-то два из трёх.
+ Пришлось засунуть текст в картинку*/
+.portfolio-item::after {
+  visibility: hidden;
+  position: absolute;
+  content: url("./content/images/Search.svg");
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 3;
 }
 
