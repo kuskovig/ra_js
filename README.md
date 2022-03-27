@@ -1,2 +1,4 @@
-# ra_js
-beauty salon layout, html+css
+# FrontEndCourse
+Kuskov Ilya
+
+BeautySalon page, html+css
