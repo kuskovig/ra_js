@@ -73,7 +73,7 @@
       <main class="main">
         <div class="container main__container">
           <div class="main__about about-us">
-            <h1 id="about-us__title">О Салоне</h1>
+            <h1 class="about-us__title" id="about-us">О Салоне</h1>
             <div class="about-us__content">
               <div class="about-us__description">
                 <p class="about-us__subtitle">
@@ -81,17 +81,17 @@
                   работают профессиональные визажисты, стилисты и мастера
                   татуажа
                 </p>
-                <p class="about-us__text">
-                  Красота и хороший уход никогда не выходят из моды. Мы
-                  приглашаем Вас в место, где гармония обретает форму, а
-                  внешность становится отражением внутреннего мира. Новая жизнь
-                  начинается с небольших изменений. Мы помогаем нашим клиентам
-                  воплотить их индивидуальность во внешнем облике. Мы создаем
-                  стиль – вместе с Вами и для Вас.
-                </p>
-                <div class="about-us__fulltext" id="full-text">
-                  <a href="#full-text" class="more">Развернуть</a>
-                  <p>
+                <div class="about-us__text" id="about-text">
+                  <p class="about-us__text_less">
+                    Красота и хороший уход никогда не выходят из моды. Мы
+                    приглашаем Вас в место, где гармония обретает форму, а
+                    внешность становится отражением внутреннего мира. Новая
+                    жизнь начинается с небольших изменений. Мы помогаем нашим
+                    клиентам воплотить их индивидуальность во внешнем облике. Мы
+                    создаем стиль – вместе с Вами и для Вас.
+                  </p>
+                  <a href="#about-text" class="more">Развернуть</a>
+                  <p class="about-us__text_more">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
@@ -100,7 +100,7 @@
                     but also the leap into electronic typesetting, remaining
                     essentially unchanged.
                   </p>
-                  <a href="#part-text" class="less">Свернуть</a>
+                  <a href="#about-us" class="less">Свернуть</a>
                 </div>
               </div>
               <div class="about-us__video-container">
@@ -155,11 +155,79 @@
           <div class="main__popular-services services">
             <h1 class="services__title">Популярные услуги</h1>
             <div class="services__content">
-              <div class="services-item"></div>
-              <div class="services-item"></div>
-              <div class="services-item"></div>
-              <div class="services-item"></div>
-              <div class="services-item"></div>
+              <div class="services-item">
+                <img
+                  src="./content/images/manicure.png"
+                  alt="manicure"
+                  class="services-item__pic"
+                />
+                <div class="services-item__description">
+                  <h4 class="services-item__title">Маникюр</h4>
+                  <p class="services-item__text">
+                    Аппаратный, комбинированный или классический.
+                  </p>
+                </div>
+                <button class="btn btn_small">Записаться</button>
+              </div>
+              <div class="services-item">
+                <img
+                  src="./content/images/manicure.png"
+                  alt="manicure"
+                  class="services-item__pic"
+                />
+                <div class="services-item__description">
+                  <h4 class="services-item__title">Покрытие гель-лак</h4>
+                  <p class="services-item__text">
+                    Гель-лак наносится в несколько слоев с использование базы и
+                    топа. Каждый слой полимеризуется в LED-лампе.
+                  </p>
+                </div>
+                <button class="btn btn_small">Записаться</button>
+              </div>
+              <div class="services-item">
+                <img
+                  src="./content/images/manicure.png"
+                  alt="manicure"
+                  class="services-item__pic"
+                />
+                <div class="services-item__description">
+                  <h4 class="services-item__title">Бразильский маникюр</h4>
+                  <p class="services-item__text">
+                    Выполняется в одноразовых перчатках наполненных увлажняющим
+                    лосьоном.
+                  </p>
+                </div>
+                <button class="btn btn_small">Записаться</button>
+              </div>
+              <div class="services-item">
+                <img
+                  src="./content/images/manicure.png"
+                  alt="manicure"
+                  class="services-item__pic"
+                />
+                <div class="services-item__description">
+                  <h4 class="services-item__title">Педикюр</h4>
+                  <p class="services-item__text">
+                    Аппаратный, комбинированный или классический.
+                  </p>
+                </div>
+                <button class="btn btn_small">Записаться</button>
+              </div>
+              <div class="services-item">
+                <img
+                  src="./content/images/manicure.png"
+                  alt="manicure"
+                  class="services-item__pic"
+                />
+                <div class="services-item__description">
+                  <h4 class="services-item__title">Парафинотерапия</h4>
+                  <p class="services-item__text">
+                    Благодаря этой процедуре увлажнение кожи увеличивается на
+                    80%, также выводит токсины и укрепляет суставы.
+                  </p>
+                </div>
+                <button class="btn btn_small">Записаться</button>
+              </div>
             </div>
           </div>
           <div class="main__prices prices">

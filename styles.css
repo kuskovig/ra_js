@@ -31,8 +31,9 @@ ul {
   margin: 0px;
 }
 
-h1 {
+.main h1 {
   font-size: 48px;
+  margin-top: 100px;
 }
 .container {
   max-width: 1200px;
@@ -133,6 +134,12 @@ h1 {
   font-size: 14px;
 }
 
+.btn_small {
+  height: 34px;
+  width: 112px;
+  font-size: 12px;
+}
+
 .btn:hover {
   cursor: pointer;
   filter: brightness(110%);
@@ -165,7 +172,7 @@ h1 {
 }
 
 .main {
-  padding: 93px 165px 0px 165px;
+  padding: 0px 165px;
 }
 
 .about-us__content {
@@ -186,21 +193,21 @@ h1 {
   line-height: 32px;
 }
 
-.about-us__fulltext a {
+.about-us__text a {
   color: #278aff;
 }
 
-.about-us__fulltext p,
+.about-us__text_more,
 .less {
   display: none;
 }
 
-.about-us__fulltext:target p,
-.about-us__fulltext:target .less {
+.about-us__text:target .about-us__text_more,
+.about-us__text:target .less {
   display: block;
 }
 
-.about-us__fulltext:target .more {
+.about-us__text:target .more {
   display: none;
 }
 
@@ -280,6 +287,36 @@ h1 {
 .perk-item__icon {
   display: block;
   margin: auto;
+}
+
+.services__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+.services-item {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services-item__pic {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.services-item__title {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 20px 0px 8px 0px;
+}
+
+.services-item__text {
+  font-size: 12px;
+  line-height: 20px;
 }
 
 /* FOOTER STYLES */
