@@ -65,7 +65,7 @@ ul {
 .header__top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 120px;
 }
 
@@ -74,12 +74,11 @@ ul {
   font-size: 24px;
 }
 .header__top .links__list {
-  margin: 6px 0px 0px 0px;
   font-size: 14px;
   font-weight: 500;
 }
 
-li a:hover {
+.links__item :hover {
   color: #00bf78;
 }
 .contacts {
@@ -88,7 +87,7 @@ li a:hover {
   text-align: end;
   font-size: 11px;
 }
-.contacts a {
+.contacts .contacts__number {
   font-weight: 500;
   font-size: 18px;
 }
@@ -98,6 +97,11 @@ li a:hover {
   font-weight: 600;
   margin: 0px;
   padding: 5px 0px;
+}
+
+.sign__subtitle {
+  font-size: 20px;
+  margin-bottom: 60px;
 }
 
 .header__social {
@@ -113,11 +117,6 @@ li a:hover {
 
 .social__item a:hover {
   filter: opacity(40%);
-}
-
-.sign__subtitle {
-  font-size: 20px;
-  margin-bottom: 60px;
 }
 
 .btn {
