@@ -31,10 +31,12 @@ ul {
   margin: 0px;
 }
 
-.main h1 {
+.title {
   font-size: 48px;
   margin-top: 100px;
+  font-weight: 700;
 }
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -87,6 +89,7 @@ ul {
   text-align: end;
   font-size: 11px;
 }
+
 .contacts .contacts__number {
   font-weight: 500;
   font-size: 18px;
@@ -103,7 +106,6 @@ ul {
   font-size: 20px;
   margin-bottom: 60px;
 }
-
 .header__social {
   position: absolute;
   top: 50%;
@@ -290,29 +292,25 @@ ul {
   margin: auto;
 }
 
-.services__content,
-.masters__content {
+.content-block {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   gap: 50px;
 }
 
-.services-item,
-.master-item {
+.content-item {
   max-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.master-item_narrow {
+.content-item_narrow {
   max-width: 255px;
 }
 
-.services-item__pic,
-.master-item__pic,
-.portfolio-item__pic {
+.picture {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -320,14 +318,13 @@ ul {
   border-radius: 8px;
 }
 
-.services-item__title,
-.master-item__title {
+.content-item__title {
   font-weight: 600;
   font-size: 18px;
   margin: 20px 0px 8px 0px;
 }
 
-.services-item__text {
+.content-item__text {
   font-size: 12px;
   line-height: 20px;
 }
@@ -354,7 +351,7 @@ ul {
   justify-content: space-between;
 }
 
-.prices__title {
+.prices-description__title {
   margin: 0px;
   font-size: 18px;
   font-weight: 500;
@@ -375,22 +372,22 @@ ul {
   color: #00bf78;
 }
 
-.master-item__text {
+.content-item__text {
   font-size: 14px;
   line-height: 17px;
 }
 
-.master-item__experience {
+.content-item__experience {
   font-size: 12px;
   font-weight: 300;
 }
-.master-item__picture-container,
+.content-item__picture-container,
 .portfolio-item {
   position: relative;
   cursor: pointer;
 }
 
-.master-item__picture-container:hover::before,
+.content-item__picture-container:hover::before,
 .portfolio-item:hover::before {
   position: absolute;
   content: "";
@@ -401,7 +398,7 @@ ul {
   z-index: 2;
 }
 
-.master-item__picture-container::after {
+.content-item__picture-container::after {
   visibility: hidden;
   position: absolute;
   content: "Записаться к мастеру";
@@ -415,7 +412,7 @@ ul {
   z-index: 3;
 }
 
-.master-item__picture-container:hover::after,
+.content-item__picture-container:hover::after,
 .portfolio-item:hover::after {
   visibility: visible;
   transform: scale(1.2) translateX(-40%) translateY(-40%);
