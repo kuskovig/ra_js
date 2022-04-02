@@ -4,7 +4,8 @@
   "description": "beauty salon layout, html+css",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.49.11"
