@@ -1,46 +1,11 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: #333;
-  min-width: 320px;
-}
-
-body,
-html {
-  height: 100%;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0px;
-  margin: 0px;
-}
+@import "./_vendors";
+@import "./_variables";
+@import "./_common";
 
 .title {
   font-size: 48px;
   margin-top: 100px;
   font-weight: 700;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
 }
 
 .header__container {
@@ -62,22 +27,22 @@ ul {
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
-}
 
-.header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 120px;
-}
-
-.header__top .logo {
-  font-weight: 700;
-  font-size: 24px;
-}
-.header__top .links__list {
-  font-size: 14px;
-  font-weight: 500;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+    position: relative;
+  }
+  & .logo {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  & .links__list {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 .links__item :hover {
@@ -221,7 +186,7 @@ ul {
   min-width: 297px;
   width: 100%;
   height: 297px;
-  background: url("./content/images/video_placeholder.png") no-repeat;
+  background: url("../content/images/video_placeholder.png") no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -239,7 +204,7 @@ ul {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  content: url("./content/images/play.svg");
+  content: url("../content/images/play.svg");
   transition: 0.2s;
   z-index: 2;
 }
@@ -444,10 +409,10 @@ ul {
 }
 .portfolio__btn.left {
   margin-right: 16px;
-  background-image: url("./content/images/button-left.svg");
+  background-image: url("../content/images/button-left.svg");
 }
 .portfolio__btn.right {
-  background-image: url("./content/images/button-right.svg");
+  background-image: url("../content/images/button-right.svg");
 }
 
 .portfolio__btn:hover {
@@ -481,7 +446,7 @@ ul {
 .portfolio-item::after {
   visibility: hidden;
   position: absolute;
-  content: url("./content/images/Search.svg");
+  content: url("../content/images/Search.svg");
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -520,3 +485,5 @@ ul {
 .links__item:not(:nth-last-child(1)) {
   margin-right: 28px;
 }
+
+@import "./_media";

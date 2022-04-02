@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  color: #333;
+  min-width: 320px;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
