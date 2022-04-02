@@ -1,0 +1,28 @@
+{
+  "name": "ra_js",
+  "version": "1.0.0",
+  "description": "beauty salon layout, html+css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuskovig/ra_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuskovig/ra_js/issues"
+  },
+  "homepage": "https://github.com/kuskovig/ra_js#readme",
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.11"
+  }
+}
