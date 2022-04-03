@@ -32,10 +32,29 @@ ul {
 }
 
 section {
-  padding-bottom: 100px;
+  margin-bottom: 100px;
+
+  &:nth-last-child(1) {
+    margin-bottom: 0px;
+  }
+
+  &.grey-bg {
+    background-color: #f8f6f7;
+    padding: 40px 0px;
+  }
 }
 .container {
   max-width: 1200px;
   margin: auto;
   position: relative;
+
+  &_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &_wide {
+    margin: 0px;
+  }
 }
