@@ -4,7 +4,6 @@
 
 .title {
   font-size: 48px;
-  margin-top: 100px;
   font-weight: 700;
 }
 
@@ -53,6 +52,12 @@
   flex-direction: column;
   text-align: end;
   font-size: 11px;
+
+  &_left {
+    text-align: start;
+    font-size: 16px;
+    gap: 20px;
+  }
 }
 
 .contacts .contacts__number {
@@ -76,14 +81,25 @@
   top: 50%;
   transform: translateY(-50%);
   right: 0px;
+
+  & li:not(:nth-last-child(1)) {
+    margin-bottom: 20px;
+  }
 }
 
-.header__social li:not(:nth-last-child(1)) {
-  margin-bottom: 20px;
-}
+.social {
+  &__list_horizontal {
+    display: flex;
+    flex-direction: row;
 
-.social__item a:hover {
-  filter: opacity(40%);
+    & li:not(:nth-last-child(1)) {
+      margin-right: 20px;
+    }
+  }
+
+  &__item a:hover {
+    filter: opacity(40%);
+  }
 }
 
 .btn {
@@ -228,7 +244,6 @@
 }
 
 .main__perks {
-  margin-top: 105px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -392,10 +407,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.portfolio__navigate-buttons {
-  margin-top: 100px;
+  align-items: baseline;
 }
 
 .portfolio__btn {
@@ -477,6 +489,12 @@
     width: 165px;
     height: 60px;
   }
+}
+
+.contact-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* FOOTER STYLES */

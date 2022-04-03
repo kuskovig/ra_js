@@ -70,7 +70,7 @@
       </header>
       <main class="main">
         <div class="container main__container">
-          <div class="main__about about-us">
+          <section class="main__about about-us">
             <h1 class="about-us__title title" id="about-us">О Салоне</h1>
             <div class="about-us__content">
               <div class="about-us__description">
@@ -105,8 +105,8 @@
                 <div class="video_overlay"></div>
               </div>
             </div>
-          </div>
-          <div class="main__perks">
+          </section>
+          <section class="main__perks">
             <div class="perk-item">
               <img
                 class="perk-item__icon"
@@ -149,8 +149,8 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="main__popular-services services">
+          </section>
+          <section class="main__popular-services services">
             <h1 class="services__title title">Популярные услуги</h1>
             <div class="content-block">
               <div class="content-item">
@@ -237,9 +237,9 @@
                 <button class="btn btn_small">Записаться</button>
               </div>
             </div>
-          </div>
-          <div class="main__prices prices">
-            <h1 class="prices__title title">Услуги и цены</h1>
+          </section>
+          <section class="main__prices prices">
+            <h1 class="prices__title title" id="prices">Услуги и цены</h1>
             <div class="prices__content">
               <nav class="links">
                 <ul class="prices__navigation">
@@ -326,9 +326,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="main__masters masters">
-            <h1 class="masters__title title">Мастера</h1>
+          </section>
+          <section class="main__masters masters">
+            <h1 class="masters__title title" id="masters">Мастера</h1>
             <p class="masters__subtitle">
               Дружная команда настоящих профессионалов
             </p>
@@ -390,10 +390,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="main__portfolio portfolio">
+          </section>
+          <section class="main__portfolio portfolio">
             <div class="portfolio__header">
-              <h1 class="portfolio__title title">Наши работы</h1>
+              <h1 class="portfolio__title title" id="portfolio">Наши работы</h1>
               <div class="portfolio__navigate-buttons">
                 <button class="portfolio__btn left"></button>
                 <button class="portfolio__btn right"></button>
@@ -413,8 +413,8 @@
                 <img src="./content/images/p4.png" alt="" class="picture" />
               </div>
             </div>
-          </div>
-          <div class="main__brands brands">
+          </section>
+          <section class="main__brands brands">
             <h6 class="brands__title">
               Бренды, которые мы используем в работе
             </h6>
@@ -455,16 +455,53 @@
                 />
               </div>
             </div>
-          </div>
-          <div class="main__contact-block contact-block">
-            <h1 class="contact-block__title title"> Контакты</h1>
-            <div class="contacts">
-              <p class="contacts__address">Томск, проспект Ленина, дом 13</p>
-              <a class="contacts__number" href="tel:84996861762">8 (499) 686-17-62</a>
-              <a href="mailto:info@more-krasoty.ru" class="contacts__email blue-link">info@more-kreasoty.ru</a>
+          </section>
+          <section class="main__contact-block contact-block">
+            <div class="contact-block__info">
+              <h1 class="contact-block__title title" id="contacts">Контакты</h1>
+              <div class="contacts contacts_left">
+                <span class="contacts__address"
+                  >Томск, проспект Ленина, дом 13</span
+                >
+                <a class="contacts__number" href="tel:84996861762"
+                  >8 (499) 686-17-62</a
+                >
+                <a
+                  href="mailto:info@more-krasoty.ru"
+                  class="contacts__email blue-link"
+                  >info@more-kreasoty.ru</a
+                >
+              </div>
+              <p class="contacts__socials-block">Мы в социальных сетях</p>
+              <div class="contacts-form">
+                <nav class="social">
+                  <ul class="social__list social__list_horizontal">
+                    <li class="social__item">
+                      <a href="https://vk.com" target="_blank">
+                        <img src="../content/images/vk.png" alt="Vk"
+                      /></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="https://instagram.com" target="_blank">
+                        <img
+                          src="../content/images/instagram.png"
+                          alt="Instagram"
+                      /></a>
+                    </li>
+                    <li class="social__item">
+                      <a href="https://youtube.com" target="_blank">
+                        <img
+                          src="../content/images/youtube.png"
+                          alt="Youtube"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-            <div class="contacts-form"</div>
-          </div>
+            <div class="contact-block__form">one two three</div>
+          </section>
         </div>
       </main>
       <footer class="footer">
@@ -472,7 +509,10 @@
           <div class="footer__content">
             <div class="footer__info">
               © 2020 «Море красоты»
-              <a class="blue-link" href="../content/dummy_policy.txt" target="_blank"
+              <a
+                class="blue-link"
+                href="../content/dummy_policy.txt"
+                target="_blank"
                 >Политика конфиденциальности</a
               >
             </div>
