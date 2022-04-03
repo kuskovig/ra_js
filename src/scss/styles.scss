@@ -281,6 +281,10 @@
   object-fit: cover;
   position: relative;
   border-radius: 8px;
+
+  &_brand {
+    object-fit: contain;
+  }
 }
 
 .content-item__title {
@@ -453,6 +457,28 @@
   z-index: 3;
 }
 
+.brands {
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.35;
+  }
+
+  &__item {
+    width: 165px;
+    height: 60px;
+  }
+}
+
 /* FOOTER STYLES */
 
 .footer__container {
@@ -471,7 +497,7 @@
   flex-direction: column;
 }
 
-.footer__info a {
+.blue-link {
   color: #278aff;
   text-decoration: underline;
 }
