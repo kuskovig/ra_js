@@ -61,7 +61,7 @@
   }
 }
 
-.contacts .contacts__number {
+.contacts__number {
   font-weight: 500;
   font-size: 18px;
 }
@@ -110,26 +110,33 @@
   border: 0px;
   text-align: center;
   flex-shrink: 0;
+
+  &_large {
+    height: 48px;
+    width: 203px;
+    font-size: 14px;
+  }
+
+  &_small {
+    height: 34px;
+    width: 112px;
+    font-size: 12px;
+  }
+
+  &_wide {
+    height: 48px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(85%);
+  }
 }
 
-.btn_large {
-  height: 48px;
-  width: 203px;
-  font-size: 14px;
-}
-
-.btn_small {
-  height: 34px;
-  width: 112px;
-  font-size: 12px;
-}
-
-.btn:hover {
-  cursor: pointer;
-  filter: brightness(110%);
-}
-
-.btn:active,
 .portfolio__btn:active {
   filter: brightness(85%);
 }
@@ -172,10 +179,6 @@
 .about-us__subtitle {
   font-size: 20px;
   line-height: 32px;
-}
-
-.about-us__text a {
-  color: #278aff;
 }
 
 .about-us__text_more,
@@ -285,10 +288,31 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.content-item_narrow {
-  max-width: 255px;
+  &_narrow {
+    max-width: 255px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 20px 0px 8px 0px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__experience {
+    font-size: 12px;
+    font-weight: 300;
+  }
 }
 
 .picture {
@@ -303,37 +327,40 @@
   }
 }
 
-.content-item__title {
-  font-weight: 600;
-  font-size: 18px;
-  margin: 20px 0px 8px 0px;
-}
+.prices {
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+  }
 
-.content-item__text {
-  font-size: 12px;
-  line-height: 20px;
-}
+  &__table {
+    display: flex;
+    margin-top: 50px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 
-.prices__navigation {
-  display: flex;
-  flex-direction: row;
-}
+  &__item {
+    min-width: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.prices__table {
-  display: none;
-  margin-top: 50px;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
+  &__subtitle {
+    font-size: 14px;
+  }
 
-.prices__table.active-table {
-  display: flex;
-}
-.prices__item {
-  min-width: 450px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00bf78;
+  }
+
+  &__link-item.active-item a {
+    text-decoration: underline;
+    color: #00bf78;
+  }
 }
 
 .prices-description__title {
@@ -342,30 +369,6 @@
   font-weight: 500;
 }
 
-.prices__subtitle {
-  font-size: 14px;
-}
-
-.prices__price {
-  font-size: 20px;
-  font-weight: 600;
-  color: #00bf78;
-}
-
-.prices__link-item.active-item a {
-  text-decoration: underline;
-  color: #00bf78;
-}
-
-.content-item__text {
-  font-size: 14px;
-  line-height: 17px;
-}
-
-.content-item__experience {
-  font-size: 12px;
-  font-weight: 300;
-}
 .content-item__picture-container,
 .portfolio-item {
   position: relative;
@@ -458,8 +461,6 @@
   justify-content: space-around;
 }
 
-/*TODO не знаю как сделать тень + текст + иконку поиска по ховеру, получается только что-то два из трёх.
- Пришлось засунуть текст в картинку*/
 .portfolio-item::after {
   visibility: hidden;
   position: absolute;
@@ -494,6 +495,38 @@
 
 .contact-block__info {
   padding-top: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 445px;
+  height: 400px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 40px;
+  box-shadow: 0px 0px 10px 0px #00000026;
+
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+  }
+
+  &__legal {
+    font-size: 12px;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px #d8d8d8 solid;
+    padding: 15px;
+  }
 }
 /* FOOTER STYLES */
 
