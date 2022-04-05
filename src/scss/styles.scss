@@ -8,10 +8,6 @@
   margin-top: 0px;
 }
 
-.header__container {
-  padding: 30px 0px 130px;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -27,6 +23,10 @@
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
+
+  &__container {
+    padding: 30px 0px 130px;
+  }
 
   &__top {
     display: flex;
@@ -163,22 +163,65 @@
   border-radius: 50%;
 }
 
-.about-us__content {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+.about-us {
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.about-us__description {
-  max-width: 597px;
-  font-size: 16px;
-  line-height: 26px;
-}
+  &__description {
+    max-width: 597px;
+    font-size: 16px;
+    line-height: 26px;
+  }
 
-.about-us__subtitle {
-  font-size: 20px;
-  line-height: 32px;
+  &__subtitle {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &__video-container {
+    border-radius: 8px;
+    position: relative;
+    max-width: 445px;
+    min-width: 297px;
+    width: 100%;
+    height: 297px;
+    background: url("../content/images/video_placeholder.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: url("../content/images/play.svg");
+      transition: 0.2s;
+      z-index: 2;
+    }
+
+    &::before {
+      position: absolute;
+      content: "Короткое видео о нас";
+      color: white;
+      font-size: 16px;
+      line-height: 26px;
+      top: 168px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 2;
+    }
+
+    &:hover::after {
+      transform: scale(1.2) translateX(-40%);
+      cursor: pointer;
+    }
+  }
 }
 
 .about-us__text_more,
@@ -195,52 +238,11 @@
   display: none;
 }
 
-.about-us__video-container {
-  border-radius: 8px;
-  position: relative;
-  max-width: 445px;
-  min-width: 297px;
-  width: 100%;
-  height: 297px;
-  background: url("../content/images/video_placeholder.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
 .video_overlay {
   position: absolute;
   background: #000;
   opacity: 0.2;
   inset: 0;
-}
-
-.about-us__video-container::after {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  content: url("../content/images/play.svg");
-  transition: 0.2s;
-  z-index: 2;
-}
-
-.about-us__video-container::before {
-  position: absolute;
-  content: "Короткое видео о нас";
-  color: white;
-  font-size: 16px;
-  line-height: 26px;
-  top: 168px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 2;
-}
-
-.about-us__video-container:hover::after {
-  transform: scale(1.2) translateX(-40%);
-  cursor: pointer;
 }
 
 .perks {
@@ -369,24 +371,23 @@
   font-weight: 500;
 }
 
-.content-item__picture-container,
-.portfolio-item {
-  position: relative;
-  cursor: pointer;
+.picture-container {
+  &_hoverable {
+    position: relative;
+    cursor: pointer;
+    &:hover::before {
+      position: absolute;
+      content: "";
+      background-color: #000;
+      opacity: 0.5;
+      inset: 0;
+      border-radius: 8px;
+      z-index: 2;
+    }
+  }
 }
 
-.content-item__picture-container:hover::before,
-.portfolio-item:hover::before {
-  position: absolute;
-  content: "";
-  background-color: #000;
-  opacity: 0.5;
-  inset: 0;
-  border-radius: 8px;
-  z-index: 2;
-}
-
-.content-item__picture-container::after {
+.masters .picture-container::after {
   visibility: hidden;
   position: absolute;
   content: "Записаться к мастеру";
@@ -400,68 +401,66 @@
   z-index: 3;
 }
 
-.content-item__picture-container:hover::after,
-.portfolio-item:hover::after {
-  visibility: visible;
-  transform: scale(1.2) translateX(-40%) translateY(-40%);
-  transition: 0.2s;
+.masters,
+.portfolio {
+  & .picture-container_hoverable:hover::after {
+    visibility: visible;
+    transform: scale(1.2) translateX(-40%) translateY(-40%);
+    transition: 0.2s;
+  }
 }
 
-.portfolio__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
+.portfolio {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0px;
+
+    &.left {
+      margin-right: 16px;
+      background-image: url("../content/images/button-left.svg");
+    }
+
+    &.right {
+      background-image: url("../content/images/button-right.svg");
+    }
+
+    &:hover {
+      background-color: #f8f6f7;
+    }
+  }
+
+  &__picture-container {
+    max-width: 338px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.portfolio__btn {
-  cursor: pointer;
-  background-color: white;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 0px;
-}
-.portfolio__btn.left {
-  margin-right: 16px;
-  background-image: url("../content/images/button-left.svg");
-}
-.portfolio__btn.right {
-  background-image: url("../content/images/button-right.svg");
-}
-
-.portfolio__btn:hover {
-  background-color: #f8f6f7;
-}
-
-.portfolio-item__pic {
-  max-width: 338px;
-}
-.portfolio-item:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
-}
-
-/*TODO Не знаю как сделать во всю ширину экрана, в текущем способе есть горизонтальный скролл и отступ от края больше чем в макете*/
-/*И при увеличениии размера экрана тоже растягивается :(*/
-.portfolio__content {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.portfolio-item::after {
+.portfolio .picture-container::after {
   visibility: hidden;
   position: absolute;
   content: url("../content/images/Search.svg");
@@ -530,20 +529,22 @@
 }
 /* FOOTER STYLES */
 
-.footer__container {
-  padding: 20px 0px;
-}
+.footer {
+  &__container {
+    padding: 20px 0px;
+  }
 
-.footer__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-}
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
 
-.footer__info {
-  display: flex;
-  flex-direction: column;
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .blue-link {
