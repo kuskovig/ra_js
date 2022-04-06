@@ -34,6 +34,10 @@
       transform: none;
       z-index: 2;
     }
+
+    & .title {
+      margin: auto;
+    }
   }
 
   .contacts {
