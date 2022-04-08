@@ -58,3 +58,19 @@ section {
     max-width: 1440px;
   }
 }
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 0px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1;
+}

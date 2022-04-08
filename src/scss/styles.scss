@@ -2,27 +2,12 @@
 @import "./_variables";
 @import "./_common";
 
-.title {
-  font-size: 48px;
-  font-weight: 700;
-  margin-top: 0px;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.main {
-  flex: 1;
-}
-
 .header {
   background: #f8f6f7 url("../content/images/header_bg.png");
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
+  margin-bottom: 100px;
 
   &__container {
     padding: 30px 0px 130px;
@@ -35,13 +20,49 @@
     margin-bottom: 120px;
     position: relative;
   }
+
   & .logo {
     font-weight: 700;
     font-size: 24px;
   }
+
   & .links__list {
     font-size: 14px;
     font-weight: 500;
+  }
+
+  &__social {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+
+    & li:not(:nth-last-child(1)) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__girl {
+    position: absolute;
+    top: 81px;
+    right: 93px;
+
+    & img {
+      position: relative;
+      display: block;
+      z-index: 10;
+    }
+
+    &::before {
+      content: "";
+      background: #fb9475;
+      position: absolute;
+      width: 472px;
+      height: 472px;
+      left: 9.6%;
+      top: 28.2%;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -59,32 +80,24 @@
     font-size: 16px;
     gap: 20px;
   }
+
+  &__number {
+    font-weight: 500;
+    font-size: 18px;
+  }
 }
 
-.contacts__number {
-  font-weight: 500;
-  font-size: 18px;
-}
+.sign {
+  &__title {
+    max-width: 493px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 5px 0px;
+  }
 
-.sign__title {
-  max-width: 493px;
-  font-weight: 600;
-  margin: 0px;
-  padding: 5px 0px;
-}
-
-.sign__subtitle {
-  font-size: 20px;
-  margin-bottom: 60px;
-}
-.header__social {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0px;
-
-  & li:not(:nth-last-child(1)) {
-    margin-bottom: 20px;
+  &__subtitle {
+    font-size: 20px;
+    margin-bottom: 60px;
   }
 }
 
@@ -139,28 +152,6 @@
 
 .portfolio__btn:active {
   filter: brightness(85%);
-}
-
-.header__girl {
-  position: absolute;
-  top: 81px;
-  right: 93px;
-}
-
-.header__girl img {
-  position: relative;
-  display: block;
-  z-index: 10;
-}
-.header__girl::before {
-  content: "";
-  background: #fb9475;
-  position: absolute;
-  width: 472px;
-  height: 472px;
-  left: 9.6%;
-  top: 28.2%;
-  border-radius: 50%;
 }
 
 .about-us {
@@ -359,9 +350,12 @@
     color: #00bf78;
   }
 
-  &__link-item.active-item a {
-    text-decoration: underline;
-    color: #00bf78;
+  &__link-item {
+    cursor: pointer;
+    &.active-item {
+      text-decoration: underline;
+      color: #00bf78;
+    }
   }
 }
 

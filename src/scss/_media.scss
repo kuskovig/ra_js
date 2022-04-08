@@ -3,6 +3,26 @@
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .masters__subtitle {
+    text-align: center;
+  }
+
+  .about-us {
+    &__content {
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__description {
+      max-width: 445px;
+    }
+  }
+
   .header__girl {
     opacity: 0.2;
     margin: auto;
@@ -10,9 +30,38 @@
     top: 0;
     right: 0;
   }
+
+  .content-block {
+    justify-content: center;
+  }
+
+  .prices {
+    &__navigation {
+      overflow-x: auto;
+      gap: 20px;
+    }
+    &__link-item {
+      white-space: nowrap;
+    }
+
+    &__table {
+      flex-direction: column;
+    }
+
+    &__item {
+      min-width: 320px;
+    }
+    &__price {
+      white-space: nowrap;
+    }
+  }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  section {
+    padding: 0px 20px;
+  }
+
   .header {
     &__top {
       flex-direction: column;
@@ -56,6 +105,37 @@
   .links__item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 15px;
+  }
+
+  .container_row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .contact-block__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brands {
+    &__content {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+
+  .footer__content {
+    padding: 0px 20px;
+  }
+
+  .portfolio__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 /* Extra Small Devices, Phones */
