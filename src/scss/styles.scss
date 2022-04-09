@@ -89,7 +89,7 @@
 
   &_close {
     position: absolute;
-    top: 20px;
+    top: 10px;
     font-size: 48px;
     display: block;
   }
@@ -565,10 +565,16 @@
   }
 
   &__input {
+    width: 100%;
     margin-bottom: 20px;
     border-radius: 4px;
     border: 1px #d8d8d8 solid;
     padding: 15px;
+  }
+
+  &__btn {
+    width: 100%;
+    display: block;
   }
 }
 /* FOOTER STYLES */

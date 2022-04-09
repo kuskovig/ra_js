@@ -1,3 +1,7 @@
+const submitBtn = document.querySelector(".contact-form__btn");
+const navTopBtn = document.querySelector(".btn.nav-top");
+const contactForm = document.querySelector(".contact-form__form");
+
 function openMenu() {
   document.querySelector(".overlay").style.height = "100%";
 }
@@ -6,7 +10,11 @@ function closeMenu() {
   document.querySelector(".overlay").style.height = "0%";
 }
 
-let navTopBtn = document.querySelector(".btn.nav-top");
+submitBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  let data = new FormData(contactForm);
+  console.log(data.get("input-phone"));
+});
 
 window.onscroll = function () {
   if (
