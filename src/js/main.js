@@ -6,6 +6,19 @@ function closeMenu() {
   document.querySelector(".overlay").style.height = "0%";
 }
 
+let navTopBtn = document.querySelector(".btn.nav-top");
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    navTopBtn.style.display = "block";
+  } else {
+    navTopBtn.style.display = "none";
+  }
+};
+
 function goToTop() {
   document.querySelector(".header").scrollIntoView({
     behavior: "smooth",

@@ -85,9 +85,7 @@
     }
 
     &__social {
-      top: 30px;
-      transform: none;
-      z-index: 2;
+      display: none;
     }
 
     & .title {
@@ -148,9 +146,13 @@
     gap: 20px;
   }
 
+  .nav-container {
+    display: block;
+    z-index: 3;
+  }
   .nav-menu {
     display: block;
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
   }
 }
