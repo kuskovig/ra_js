@@ -64,10 +64,16 @@
 
   .header {
     &__top {
-      flex-direction: column;
-      gap: 30px;
-      z-index: 1;
-      align-items: center;
+      display: none;
+
+      &_overlay {
+        display: flex;
+        padding-top: 4%;
+        flex-direction: column;
+        gap: 30px;
+        z-index: 1;
+        align-items: center;
+      }
     }
 
     &__girl {
@@ -86,6 +92,10 @@
 
     & .title {
       margin: auto;
+    }
+
+    &__container {
+      padding: 60px 20px;
     }
   }
 
@@ -136,6 +146,12 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+
+  .nav-menu {
+    display: block;
+    z-index: 2;
+    cursor: pointer;
   }
 }
 /* Extra Small Devices, Phones */

@@ -66,6 +66,44 @@
               </li>
             </ul>
           </nav>
+          <div class="nav-container">
+            <div onclick="openMenu()" class="nav-menu">&#9776;</div>
+          </div>
+          <div class="overlay">
+            <div onclick="closeMenu()" class="nav-menu nav-menu_close">
+              &times;
+            </div>
+            <div class="header__top header__top_overlay">
+              <a class="logo" href="/">Мир Красоты</a>
+
+              <nav class="links">
+                <ul class="links__list">
+                  <li class="links__item">
+                    <a onclick="closeMenu()" href="#prices">Услуги и цены</a>
+                  </li>
+                  <li class="links__item">
+                    <a onclick="closeMenu()" href="#masters">Мастера</a>
+                  </li>
+                  <li class="links__item">
+                    <a onclick="closeMenu()" href="#portfolio">Наши работы</a>
+                  </li>
+                  <li class="links__item">
+                    <a onclick="closeMenu()" href="#about-us">О нас</a>
+                  </li>
+                  <li class="links__item">
+                    <a onclick="closeMenu()" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="contacts">
+                <a class="contacts__number" href="tel:84996861762"
+                  >8 (499) 686-17-62</a
+                >
+                <span>с 10.00 до 19.00 без выходных</span>
+              </div>
+            </div>
+          </div>
+          <button onclick="goToTop()" class="btn nav-top">&#8679;</button>
         </div>
       </header>
       <main class="main">
@@ -570,5 +608,6 @@
         </div>
       </footer>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>

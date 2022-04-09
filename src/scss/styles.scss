@@ -66,6 +66,31 @@
   }
 }
 
+.nav-menu {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  font-size: 32px;
+  display: none;
+
+  &_close {
+    position: absolute;
+    top: 20px;
+    font-size: 48px;
+    display: block;
+  }
+}
+
+.overlay {
+  background-color: white;
+  position: fixed;
+  height: 0%;
+  width: 100%;
+  inset: 0;
+  z-index: 9999;
+  overflow-y: hidden;
+}
+
 .links__item :hover {
   color: #00bf78;
 }
@@ -148,6 +173,17 @@
   &:active {
     filter: brightness(85%);
   }
+}
+
+.nav-top {
+  position: fixed;
+  bottom: 80px;
+  right: 5%;
+  border-radius: 50px;
+  padding: 0px 8px;
+  z-index: 3;
+  opacity: 50%;
+  font-size: 48px;
 }
 
 .portfolio__btn:active {
