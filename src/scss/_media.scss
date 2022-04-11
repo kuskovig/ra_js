@@ -61,10 +61,17 @@
   section {
     padding: 0px 20px;
   }
+  /*Display only title of top menu with small screen size*/
+  .header__container > .header__top {
+    text-align: center;
+    & > *:not(a) {
+      display: none;
+    }
+  }
 
   .header {
     &__top {
-      display: none;
+      margin: 60px;
 
       &_overlay {
         display: flex;

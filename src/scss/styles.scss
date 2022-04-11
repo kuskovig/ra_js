@@ -68,9 +68,6 @@
 
 .nav-container {
   display: none;
-}
-.nav-container::before {
-  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -78,8 +75,8 @@
   width: 100%;
   background-color: white;
   box-shadow: 0 1px 10px #0000001a;
-  z-index: 3;
 }
+
 .nav-menu {
   position: fixed;
   top: 15px;
