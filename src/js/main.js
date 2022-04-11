@@ -6,11 +6,9 @@ const overlay = document.querySelector(".overlay");
 
 navMenuBtn.forEach((btn) => {
   btn.addEventListener("click", (event) => {
-    if (overlay.style.height == "100%") {
-      overlay.style.height = "0%";
-    } else {
-      overlay.style.height = "100%";
-    }
+    overlay.style.height == "100%"
+      ? (overlay.style.height = "0%")
+      : (overlay.style.height = "100%");
   });
 });
 
