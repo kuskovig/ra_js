@@ -1,21 +1,33 @@
-const submitBtn = document.querySelector(".contact-form__btn");
 const navTopBtn = document.querySelector(".btn.nav-top");
+const overlayMenu = document.querySelector(".header__top_overlay");
 const contactForm = document.querySelector(".contact-form__form");
 const navMenuBtn = document.querySelectorAll(".nav-menu");
 const overlay = document.querySelector(".overlay");
 
+function closeMenu() {
+  overlay.style.height == "100%"
+    ? (overlay.style.height = "0%")
+    : (overlay.style.height = "100%");
+}
+
+overlayMenu.addEventListener("click", (event) => {
+  if (event.target.nodeName == "A") {
+    closeMenu();
+  }
+});
+
 navMenuBtn.forEach((btn) => {
   btn.addEventListener("click", (event) => {
-    overlay.style.height == "100%"
-      ? (overlay.style.height = "0%")
-      : (overlay.style.height = "100%");
+    closeMenu();
   });
 });
 
-submitBtn.addEventListener("click", (event) => {
+contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  let data = new FormData(contactForm);
-  console.log(data.get("input-phone"));
+  data = new FormData(contactForm);
+  for (let value of data.entries()) {
+    console.log(`${value[0]}:${value[1]}`);
+  }
 });
 
 window.onscroll = function () {
