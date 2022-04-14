@@ -374,10 +374,13 @@
   }
 
   &__table {
-    display: flex;
+    display: none;
     margin-top: 50px;
     flex-flow: row wrap;
     justify-content: space-between;
+    &.active-table {
+      display: flex;
+    }
   }
 
   &__item {

@@ -3,6 +3,10 @@ const overlayMenu = document.querySelector(".header__top_overlay");
 const contactForm = document.querySelector(".contact-form__form");
 const navMenuBtn = document.querySelectorAll(".nav-menu");
 const overlay = document.querySelector(".overlay");
+const pricesTab = document.querySelector(".prices__navigation");
+const pricesTabItems = document.querySelectorAll(".prices__link-item");
+const pricesTables = document.querySelectorAll(".prices__table");
+const pricesTablesContainer = document.querySelector(".prices__table-list");
 
 function closeMenu() {
   overlay.style.height == "100%"
@@ -58,4 +62,19 @@ document.querySelectorAll("a[href^='#']").forEach((a) => {
       behavior: "smooth",
     });
   });
+});
+
+pricesTab.addEventListener("click", (event) => {
+  const eventTarget = event.target;
+  const tabIndex = Array.from(pricesTabItems).indexOf(eventTarget);
+  if (eventTarget.nodeName == "LI") {
+    for (item of pricesTabItems) {
+      item.classList.remove("active-item");
+    }
+    for (tableItem of pricesTables) {
+      tableItem.classList.remove("active-table");
+    }
+    eventTarget.classList.add("active-item");
+    Array.from(pricesTables).at(tabIndex).classList.add("active-table");
+  }
 });
