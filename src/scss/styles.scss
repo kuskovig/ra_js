@@ -270,19 +270,9 @@
   inset: 0;
 }
 
-.perks {
-  &__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  &__perk-item {
-    max-width: 350px;
-  }
-}
-
 .perk-item {
+  max-width: 350px;
+
   &__description {
     text-align: center;
     font-size: 14px;
@@ -545,6 +535,7 @@
   background-color: #ffffff;
   padding: 40px;
   box-shadow: 0 0 10px 0 #00000026;
+  margin-right: 100px;
 
   &__title {
     margin: 0;

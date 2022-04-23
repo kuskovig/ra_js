@@ -133,10 +133,14 @@
         </div>
       </header>
       <main class="main">
-        <section class="section main__about about-us">
+        <section class="section about-us">
           <div class="container">
-            <h1 class="about-us__title title" id="about-us">О Салоне</h1>
-            <div class="about-us__content">
+
+            <div class="section__header">
+              <h1 class="section__title" id="about-us">О Салоне</h1>
+            </div>
+
+            <div class="section__inner about-us__content">
               <div class="about-us__description">
                 <p class="about-us__subtitle">
                   Мир красоты - это уютный салон в самом центре города. Здесь
@@ -161,53 +165,55 @@
             </div>
           </div>
         </section>
-        <section class="section main__perks perks">
-          <div class="container_row container">
-            <div class="perks__perk-item perk-item">
-              <img
-                class="perk-item__icon"
-                src="./content/images/mirror.svg"
-                alt="mirror"
-              />
-              <div class="perk-item__description">
-                <h4 class="perk-item__title">Удобные кабинеты</h4>
-                <p class="perk-item__text">
-                  Комфорт и стиль - принцип создания кабинетов салона красоты.
-                  Только эстетика и удобство для Вас
-                </p>
+        <section class="section">
+          <div class="container">
+            <div class="section__inner section__inner_row">
+              <div class="perks__perk-item perk-item">
+                <img
+                  class="perk-item__icon"
+                  src="./content/images/mirror.svg"
+                  alt="mirror"
+                />
+                <div class="perk-item__description">
+                  <h4 class="perk-item__title">Удобные кабинеты</h4>
+                  <p class="perk-item__text">
+                    Комфорт и стиль - принцип создания кабинетов салона красоты.
+                    Только эстетика и удобство для Вас
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="perks__perk-item perk-item">
-              <img
-                class="perk-item__icon"
-                src="./content/images/lotion.svg"
-                alt="lotion"
-              />
-              <div class="perk-item__description">
-                <h4 class="perk-item__title">Качественная косметика</h4>
-                <p class="perk-item__text">
-                  Используем профессиональные материалы высшего качества лучших
-                  брендов
-                </p>
+              <div class="perks__perk-item perk-item">
+                <img
+                  class="perk-item__icon"
+                  src="./content/images/lotion.svg"
+                  alt="lotion"
+                />
+                <div class="perk-item__description">
+                  <h4 class="perk-item__title">Качественная косметика</h4>
+                  <p class="perk-item__text">
+                    Используем профессиональные материалы высшего качества лучших
+                    брендов
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="perks__perk-item perk-item">
-              <img
-                class="perk-item__icon"
-                src="./content/images/scissors.svg"
-                alt="scissors"
-              />
-              <div class="perk-item__description">
-                <h4 class="perk-item__title">Опытные мастера</h4>
-                <p class="perk-item__text">
-                  Работают только опытные мастера с чувством стиля. Смотрите
-                  наших специалистов в разделе Мастера
-                </p>
+              <div class="perks__perk-item perk-item">
+                <img
+                  class="perk-item__icon"
+                  src="./content/images/scissors.svg"
+                  alt="scissors"
+                />
+                <div class="perk-item__description">
+                  <h4 class="perk-item__title">Опытные мастера</h4>
+                  <p class="perk-item__text">
+                    Работают только опытные мастера с чувством стиля. Смотрите
+                    наших специалистов в разделе Мастера
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="section main__popular-services services">
+        <section class="section services">
           <div class="container">
             <h1 class="services__title title">Популярные услуги</h1>
             <div class="content-block">
@@ -297,7 +303,7 @@
             </div>
           </div>
         </section>
-        <section class="section main__prices prices">
+        <section class="section prices">
           <div class="container">
             <h1 class="prices__title title" id="prices">Услуги и цены</h1>
             <div class="prices__content">
@@ -514,7 +520,7 @@
             </div>
           </div>
         </section>
-        <section class="section main__masters masters section_grey-bg">
+        <section class="section section_grey-bg masters ">
           <div class="container">
             <h1 class="masters__title title" id="masters">Мастера</h1>
             <p class="masters__subtitle">
@@ -580,7 +586,7 @@
             </div>
           </div>
         </section>
-        <section class="section main__portfolio portfolio">
+        <section class="section portfolio">
           <div class="container container_wide">
             <div class="container portfolio__header">
               <h1 class="portfolio__title title" id="portfolio">Наши работы</h1>
@@ -613,12 +619,14 @@
             </div>
           </div>
         </section>
-        <section class="section main__brands brands">
+        <section class="section brands">
           <div class="container">
-            <h6 class="brands__title">
-              Бренды, которые мы используем в работе
-            </h6>
-            <div class="brands__content">
+            <div class="section__header">
+              <h6 class="brands__title">
+                Бренды, которые мы используем в работе
+              </h6>
+            </div>
+            <div class="section__inner brands__content">
               <div class="brands__item">
                 <img
                   class="picture picture_brand"
@@ -657,81 +665,83 @@
             </div>
           </div>
         </section>
-        <section class="section main__contact-block contact-block section_grey-bg">
-          <div class="container_row container">
-            <div class="contact-block__info">
-              <h1 class="contact-block__title title" id="contacts">Контакты</h1>
-              <div class="contacts contacts_left">
-                <span class="contacts__address"
-                  >Томск, проспект Ленина, дом 13</span
-                >
-                <a class="contacts__number" href="tel:84996861762"
-                  >8 (499) 686-17-62</a
-                >
-                <a
-                  href="mailto:info@more-krasoty.ru"
-                  class="contacts__email blue-link"
-                  >info@more-krasoty.ru</a
-                >
+        <section class="section section_grey-bg contact-block ">
+          <div class="container">
+            <div class="section__inner section__inner_row">
+              <div class="contact-block__info">
+                <h1 class="contact-block__title title" id="contacts">Контакты</h1>
+                <div class="contacts contacts_left">
+                  <span class="contacts__address"
+                    >Томск, проспект Ленина, дом 13</span
+                  >
+                  <a class="contacts__number" href="tel:84996861762"
+                    >8 (499) 686-17-62</a
+                  >
+                  <a
+                    href="mailto:info@more-krasoty.ru"
+                    class="contacts__email blue-link"
+                    >info@more-krasoty.ru</a
+                  >
+                </div>
+                <p class="contacts__socials-block">Мы в социальных сетях</p>
+                <div class="contacts-form">
+                  <nav class="social">
+                    <ul class="social__list social__list_horizontal">
+                      <li class="social__item">
+                        <a href="https://vk.com" target="_blank">
+                          <img src="../content/images/vk.png" alt="Vk"
+                        /></a>
+                      </li>
+                      <li class="social__item">
+                        <a href="https://instagram.com" target="_blank">
+                          <img
+                            src="../content/images/instagram.png"
+                            alt="Instagram"
+                        /></a>
+                      </li>
+                      <li class="social__item">
+                        <a href="https://youtube.com" target="_blank">
+                          <img
+                            src="../content/images/youtube.png"
+                            alt="Youtube"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
-              <p class="contacts__socials-block">Мы в социальных сетях</p>
-              <div class="contacts-form">
-                <nav class="social">
-                  <ul class="social__list social__list_horizontal">
-                    <li class="social__item">
-                      <a href="https://vk.com" target="_blank">
-                        <img src="../content/images/vk.png" alt="Vk"
-                      /></a>
-                    </li>
-                    <li class="social__item">
-                      <a href="https://instagram.com" target="_blank">
-                        <img
-                          src="../content/images/instagram.png"
-                          alt="Instagram"
-                      /></a>
-                    </li>
-                    <li class="social__item">
-                      <a href="https://youtube.com" target="_blank">
-                        <img
-                          src="../content/images/youtube.png"
-                          alt="Youtube"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+              <div class="contact-block__form contact-form">
+                <h4 class="contact-form__title">Быстрая запись</h4>
+                <p class="contact-form__subtitle">
+                  Наш менеджер перезвонит в течение нескольких минут, уточнит
+                  подробности и согласует время.
+                </p>
+                <form class="contact-form__form">
+                  <input
+                    type="text"
+                    name="name"
+                    class="input-name contact-form__input"
+                    placeholder="Ваше имя"
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="input-phone contact-form__input"
+                    placeholder="+7 (___) ___-__-__"
+                  />
+                  <input type="submit" value="Записаться"class="btn btn_wide"></input>
+                </form>
+                <p class="contact-form__legal">
+                  Нажимая на кнопку вы соглашаетесь с
+                  <a
+                    href="./content/dummy_personal-data-processing-policy.txt"
+                    target="_blank"
+                    class="contact-form__policy blue-link"
+                    >обработкой персональных данных</a
+                  >
+                </p>
               </div>
-            </div>
-            <div class="contact-block__form contact-form">
-              <h4 class="contact-form__title">Быстрая запись</h4>
-              <p class="contact-form__subtitle">
-                Наш менеджер перезвонит в течение нескольких минут, уточнит
-                подробности и согласует время.
-              </p>
-              <form class="contact-form__form">
-                <input
-                  type="text"
-                  name="name"
-                  class="input-name contact-form__input"
-                  placeholder="Ваше имя"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  class="input-phone contact-form__input"
-                  placeholder="+7 (___) ___-__-__"
-                />
-                <input type="submit" value="Записаться"class="btn btn_wide"></input>
-              </form>
-              <p class="contact-form__legal">
-                Нажимая на кнопку вы соглашаетесь с
-                <a
-                  href="./content/dummy_personal-data-processing-policy.txt"
-                  target="_blank"
-                  class="contact-form__policy blue-link"
-                  >обработкой персональных данных</a
-                >
-              </p>
             </div>
           </div>
         </section>

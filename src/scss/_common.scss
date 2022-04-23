@@ -32,7 +32,18 @@ ul {
 }
 
 .section {
+  &__inner {
+    &_row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
   padding: 50px 0;
+
+  &__title {
+    @extend .title;
+  }
 
   &_grey-bg {
     background-color: $white-color;
@@ -44,11 +55,11 @@ ul {
   position: relative;
   padding: 0 20px;
 
-  &_row {
+  /* &_row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+  }*/
 
   &_wide {
     max-width: 1440px;

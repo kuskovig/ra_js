@@ -58,8 +58,15 @@
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  section {
-    padding: 0px 20px;
+  .section {
+    &__inner {
+      &_row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+    }
   }
   /*Display only title of top menu with small screen size*/
   .header__container > .header__top {
@@ -89,6 +96,7 @@
 
     &__sign {
       text-align: center;
+      margin: auto;
     }
 
     &__social {
@@ -122,17 +130,15 @@
     margin-bottom: 15px;
   }
 
-  .container_row {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
   .contact-block__info {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .contact-form {
+    margin-right: 0px;
+    text-align: center;
   }
 
   .brands {
