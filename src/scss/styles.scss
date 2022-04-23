@@ -1,6 +1,6 @@
-@import "./_vendors";
-@import "./_variables";
-@import "./_common";
+@import "./vendors";
+@import "./variables";
+@import "./common";
 
 .header {
   background: $white-color url("../content/images/header_bg.png");
@@ -8,6 +8,10 @@
   position: relative;
   flex-shrink: 0;
   margin-bottom: 100px;
+
+  &__sign {
+    max-width: 493px;
+  }
 
   &__container {
     padding: 30px 0 130px;
@@ -125,7 +129,6 @@
 
 .sign {
   &__title {
-    max-width: 493px;
     font-weight: 600;
     margin: 0;
     padding: 5px 0;
@@ -174,6 +177,8 @@
 
   &_wide {
     height: 48px;
+    width: 100%;
+    display: block;
   }
 
   &:hover {
@@ -279,8 +284,6 @@
 
 .perk-item {
   &__description {
-    display: flex;
-    flex-direction: column;
     text-align: center;
     font-size: 14px;
     line-height: 22px;
@@ -494,10 +497,15 @@
   & .picture-container::after {
     visibility: hidden;
     position: absolute;
-    content: url("../content/images/Search.svg");
-    top: 50%;
+    content: "Увеличить";
+    background-image: url("../content/images/Search1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 70px;
+    color: $white-color;
+    top: 40%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-40%);
     z-index: 3;
   }
 }
@@ -531,7 +539,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 445px;
+  max-width: 445px;
   height: 400px;
   border-radius: 8px;
   background-color: #ffffff;
@@ -558,11 +566,6 @@
     border-radius: 4px;
     border: 1px #d8d8d8 solid;
     padding: 15px;
-  }
-
-  &__btn {
-    width: 100%;
-    display: block;
   }
 }
 /* FOOTER STYLES */
@@ -600,4 +603,4 @@
   margin-right: 28px;
 }
 
-@import "./_media";
+@import "./media";
