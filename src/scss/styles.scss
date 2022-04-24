@@ -88,17 +88,17 @@
   font-size: 32px;
   display: none;
 
-  &__open:after {
+  &_open:after {
     display: block;
     position: absolute;
     inset: 0;
     content: "☰";
   }
 
-  &__close:after {
+  &_close:after {
     display: block;
     position: absolute;
-    inset: -10px 0 0 0;
+    inset: -7px 0 0 0;
     content: "\00d7";
     font-size: 48px;
   }

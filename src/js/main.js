@@ -1,7 +1,7 @@
 const navTopBtn = document.querySelector(".btn.nav-top");
 const overlayMenu = document.querySelector(".header__top_overlay");
 const contactForm = document.querySelector(".contact-form__form");
-const navMenuBtn = document.querySelector(".nav-menu");
+const navMenu = document.querySelector(".nav-menu");
 const overlay = document.querySelector(".overlay");
 const pricesTab = document.querySelector(".prices__navigation");
 const pricesTabItems = document.querySelectorAll(".prices__link-item");
@@ -10,7 +10,8 @@ const pricesTablesContainer = document.querySelector(".prices__table-list");
 
 function toggleOverlayMenu() {
   overlay.classList.toggle("overlay_visible");
-  navMenuBtn.classList.toggle("nav-menu__close");
+  navMenu.classList.toggle("nav-menu_open");
+  navMenu.classList.toggle("nav-menu_close");
 }
 
 overlayMenu.addEventListener("click", (event) => {
@@ -19,7 +20,7 @@ overlayMenu.addEventListener("click", (event) => {
   }
 });
 
-navMenuBtn.addEventListener("click", (event) => {
+navMenu.addEventListener("click", (event) => {
   toggleOverlayMenu();
 });
 
