@@ -39,9 +39,11 @@ window.onscroll = function () {
     document.body.scrollTop > 100 ||
     document.documentElement.scrollTop > 100
   ) {
-    navTopBtn.style.display = "block";
+    navTopBtn.style.visibility = "visible";
+    navTopBtn.style.opacity = "50%";
   } else {
-    navTopBtn.style.display = "none";
+    navTopBtn.style.visibility = "hidden";
+    navTopBtn.style.opacity = "0%";
   }
 };
 
