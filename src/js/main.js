@@ -1,29 +1,26 @@
 const navTopBtn = document.querySelector(".btn.nav-top");
 const overlayMenu = document.querySelector(".header__top_overlay");
 const contactForm = document.querySelector(".contact-form__form");
-const navMenuBtn = document.querySelectorAll(".nav-menu");
+const navMenuBtn = document.querySelector(".nav-menu");
 const overlay = document.querySelector(".overlay");
 const pricesTab = document.querySelector(".prices__navigation");
 const pricesTabItems = document.querySelectorAll(".prices__link-item");
 const pricesTables = document.querySelectorAll(".prices__table");
 const pricesTablesContainer = document.querySelector(".prices__table-list");
 
-function closeMenu() {
-  overlay.style.height == "100%"
-    ? (overlay.style.height = "0%")
-    : (overlay.style.height = "100%");
+function toggleOverlayMenu() {
+  overlay.classList.toggle("overlay_visible");
+  navMenuBtn.classList.toggle("nav-menu__close");
 }
 
 overlayMenu.addEventListener("click", (event) => {
   if (event.target.nodeName == "A") {
-    closeMenu();
+    toggleOverlayMenu();
   }
 });
 
-navMenuBtn.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    closeMenu();
-  });
+navMenuBtn.addEventListener("click", (event) => {
+  toggleOverlayMenu();
 });
 
 contactForm.addEventListener("submit", (event) => {
@@ -35,16 +32,9 @@ contactForm.addEventListener("submit", (event) => {
 });
 
 window.onscroll = function () {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    navTopBtn.style.visibility = "visible";
-    navTopBtn.style.opacity = "50%";
-  } else {
-    navTopBtn.style.visibility = "hidden";
-    navTopBtn.style.opacity = "0%";
-  }
+  document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
+    ? navTopBtn.classList.add("nav-top_visible")
+    : navTopBtn.classList.remove("nav-top_visible");
 };
 
 navTopBtn.addEventListener("click", (event) => {
