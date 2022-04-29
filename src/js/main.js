@@ -26,10 +26,8 @@ navMenu.addEventListener("click", (event) => {
 
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  data = new FormData(contactForm);
-  for (let value of data.entries()) {
-    console.log(`${value[0]}:${value[1]}`);
-  }
+  let data = new FormData(contactForm);
+  data.forEach((value, key) => console.log(`${key}:${value}`));
 });
 
 window.onscroll = function () {
@@ -45,7 +43,7 @@ navTopBtn.addEventListener("click", (event) => {
 });
 
 /*Add smooth scroll for anchor links with offset for small screen sizes top-background*/
-document.querySelectorAll("a[href^='#']").forEach((a) => {
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", function (event) {
     event.preventDefault();
     element = document.querySelector(this.getAttribute("href"));
@@ -57,6 +55,7 @@ document.querySelectorAll("a[href^='#']").forEach((a) => {
   });
 });
 
+/*
 pricesTab.addEventListener("click", (event) => {
   const eventTarget = event.target;
   const tabIndex = Array.from(pricesTabItems).indexOf(eventTarget);
@@ -71,3 +70,63 @@ pricesTab.addEventListener("click", (event) => {
     Array.from(pricesTables).at(tabIndex).classList.add("active-table");
   }
 });
+*/
+
+class TabItem {
+  constructor(link, content) {
+    this.link = link;
+    this.content = content;
+  }
+
+  onClick(callback) {
+    this.link.addEventListener("click", () => callback());
+  }
+
+  activate() {
+    this._toggle(true);
+  }
+
+  deactivate() {
+    this._toggle(false);
+  }
+
+  _toggle(activate) {
+    this.link.classList.toggle("active-item", activate);
+    this.content.classList.toggle("active-table", activate);
+  }
+}
+
+class TabsManager {
+  constructor(tabsElem) {
+    this.tabs = [];
+    this.activeTab = null;
+
+    this.init(tabsElem);
+    this.activateTab(this.tabs[0]);
+  }
+
+  init(tabsElem) {
+    const links = tabsElem.querySelectorAll(".prices__navigation li");
+    const contents = tabsElem.querySelectorAll(".prices__table");
+
+    for (let i = 0; i < links.length; i++) {
+      const tab = new TabItem(links[i], contents[i]);
+      this.tabs.push(tab);
+
+      tab.onClick(() => this.activateTab(tab));
+    }
+  }
+
+  activateTab(tab) {
+    if (this.activeTab) {
+      this.activeTab.deactivate();
+    }
+    this.activeTab = tab;
+    this.activeTab.activate();
+  }
+}
+
+window.onload = function () {
+  const tabsElem = document.querySelector(".prices__content");
+  new TabsManager(tabsElem);
+};
