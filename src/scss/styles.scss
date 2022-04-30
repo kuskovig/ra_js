@@ -359,10 +359,11 @@
 }
 
 .content-item {
-  max-width: 350px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height:100%;
 
   &_narrow {
     max-width: 255px;
@@ -392,7 +393,7 @@
 
 .picture {
   width: 100%;
-  height: 100%;
+  height: 220px;
   object-fit: cover;
   position: relative;
   border-radius: 8px;
