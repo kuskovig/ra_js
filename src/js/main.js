@@ -3,10 +3,19 @@ const overlayMenu = document.querySelector(".header__top_overlay");
 const contactForm = document.querySelector(".contact-form__form");
 const navMenu = document.querySelector(".nav-menu");
 const overlay = document.querySelector(".overlay");
-const pricesTab = document.querySelector(".prices__navigation");
-const pricesTabItems = document.querySelectorAll(".prices__link-item");
-const pricesTables = document.querySelectorAll(".prices__table");
-const pricesTablesContainer = document.querySelector(".prices__table-list");
+const aboutUsButtonsContainer = document.querySelector(".about-us__buttons-container");
+const aboutUsButtons = document.querySelectorAll(".about-us__button")
+const aboutUsMoretext = document.querySelector(".about-us__moretext")
+
+
+
+
+aboutUsButtonsContainer.addEventListener("click", (event) => {
+  aboutUsButtons.forEach((button)=>{
+    button.classList.toggle("about-us__button_visible")
+  })
+  aboutUsMoretext.classList.toggle("about-us__moretext_visible")
+})
 
 function toggleOverlayMenu() {
   overlay.classList.toggle("overlay_visible");
@@ -54,23 +63,6 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     });
   });
 });
-
-/*
-pricesTab.addEventListener("click", (event) => {
-  const eventTarget = event.target;
-  const tabIndex = Array.from(pricesTabItems).indexOf(eventTarget);
-  if (eventTarget.nodeName == "LI") {
-    for (item of pricesTabItems) {
-      item.classList.remove("active-item");
-    }
-    for (tableItem of pricesTables) {
-      tableItem.classList.remove("active-table");
-    }
-    eventTarget.classList.add("active-item");
-    Array.from(pricesTables).at(tabIndex).classList.add("active-table");
-  }
-});
-*/
 
 class TabItem {
   constructor(link, content) {

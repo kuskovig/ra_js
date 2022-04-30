@@ -234,11 +234,40 @@
 }
 
 .about-us {
+
+  &__moretext {
+    visibility: hidden;
+    position:absolute;
+    left:-99999px;
+    opacity: 0%;
+    transition: 0.5s;
+
+    &_visible {
+      visibility: visible;
+      position: static;
+      opacity: 100%;
+    }
+  }
+
+  &__buttons-container {
+    display: inline-block;  
+  }
+
+  &__button {
+    display: none;
+    cursor: pointer;
+    @extend .blue-link;
+
+    &_visible {
+      display:block;
+    }
+  }
+
   &__content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__description {
