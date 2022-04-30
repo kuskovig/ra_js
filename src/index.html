@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beauty Salon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -197,69 +200,81 @@
       <section class="section services">
         <div class="container">
           <h1 class="services__title title">Популярные услуги</h1>
-          <div class="content-block">
-            <div class="content-item">
-              <div class="content-item__picture-container">
-                <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+          <div class="content-block container overflow-hidden p-0">
+            <div class="row g-2  row-cols-sm-3 row-cols-1">
+              <div class="col">
+                <div class="content-item">
+                  <div class="content-item__picture-container">
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Маникюр</h4>
+                    <p class="content-item__text">
+                      Аппаратный, комбинированный или классический.
+                    </p>
+                  </div>
+                  <button class="btn btn_small">Записаться</button>
+                </div>
               </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Маникюр</h4>
-                <p class="content-item__text">
-                  Аппаратный, комбинированный или классический.
-                </p>
+              <div class="col">
+                <div class="content-item">
+                  <div class="content-item__picture-container">
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Покрытие гель-лак</h4>
+                    <p class="content-item__text">
+                      Гель-лак наносится в несколько слоев с использование базы и
+                      топа. Каждый слой полимеризуется в LED-лампе.
+                    </p>
+                  </div>
+                  <button class="btn btn_small">Записаться</button>
+                </div>
               </div>
-              <button class="btn btn_small">Записаться</button>
-            </div>
-            <div class="content-item">
-              <div class="content-item__picture-container">
-                <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+              <div class="col">
+                <div class="content-item">
+                  <div class="content-item__picture-container">
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Бразильский маникюр</h4>
+                    <p class="content-item__text">
+                      Выполняется в одноразовых перчатках наполненных увлажняющим
+                      лосьоном.
+                    </p>
+                  </div>
+                  <button class="btn btn_small">Записаться</button>
+                </div>
               </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Покрытие гель-лак</h4>
-                <p class="content-item__text">
-                  Гель-лак наносится в несколько слоев с использование базы и
-                  топа. Каждый слой полимеризуется в LED-лампе.
-                </p>
+              <div class="col">
+                <div class="content-item">
+                  <div class="content-item__picture-container">
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Педикюр</h4>
+                    <p class="content-item__text">
+                      Аппаратный, комбинированный или классический.
+                    </p>
+                  </div>
+                  <button class="btn btn_small">Записаться</button>
+                </div>
               </div>
-              <button class="btn btn_small">Записаться</button>
-            </div>
-            <div class="content-item">
-              <div class="content-item__picture-container">
-                <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+              <div class="col">
+                <div class="content-item">
+                  <div class="content-item__picture-container">
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Парафинотерапия</h4>
+                    <p class="content-item__text">
+                      Благодаря этой процедуре увлажнение кожи увеличивается на
+                      80%, также выводит токсины и укрепляет суставы.
+                    </p>
+                  </div>
+                  <button class="btn btn_small">Записаться</button>
+                </div>
               </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Бразильский маникюр</h4>
-                <p class="content-item__text">
-                  Выполняется в одноразовых перчатках наполненных увлажняющим
-                  лосьоном.
-                </p>
-              </div>
-              <button class="btn btn_small">Записаться</button>
-            </div>
-            <div class="content-item">
-              <div class="content-item__picture-container">
-                <img src="./content/images/manicure.png" alt="manicure" class="picture" />
-              </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Педикюр</h4>
-                <p class="content-item__text">
-                  Аппаратный, комбинированный или классический.
-                </p>
-              </div>
-              <button class="btn btn_small">Записаться</button>
-            </div>
-            <div class="content-item">
-              <div class="content-item__picture-container">
-                <img src="./content/images/manicure.png" alt="manicure" class="picture" />
-              </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Парафинотерапия</h4>
-                <p class="content-item__text">
-                  Благодаря этой процедуре увлажнение кожи увеличивается на
-                  80%, также выводит токсины и укрепляет суставы.
-                </p>
-              </div>
-              <button class="btn btn_small">Записаться</button>
             </div>
           </div>
         </div>
@@ -657,6 +672,9 @@
     </footer>
   </div>
   <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
