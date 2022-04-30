@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beauty Salon</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -200,12 +200,12 @@
       <section class="section services">
         <div class="container">
           <h1 class="services__title title">Популярные услуги</h1>
-          <div class="content-block container overflow-hidden p-0">
+          <div class=" container overflow-hidden p-0">
             <div class="row g-3  row-cols-sm-3 row-cols-1">
               <div class="col">
                 <div class="content-item">
                   <div class="content-item__picture-container">
-                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture " />
                   </div>
                   <div class="content-item__description">
                     <h4 class="content-item__title">Маникюр</h4>
@@ -219,7 +219,7 @@
               <div class="col">
                 <div class="content-item">
                   <div class="content-item__picture-container">
-                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture " />
                   </div>
                   <div class="content-item__description">
                     <h4 class="content-item__title">Покрытие гель-лак</h4>
@@ -234,7 +234,7 @@
               <div class="col">
                 <div class="content-item">
                   <div class="content-item__picture-container">
-                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture " />
                   </div>
                   <div class="content-item__description">
                     <h4 class="content-item__title">Бразильский маникюр</h4>
@@ -249,7 +249,7 @@
               <div class="col">
                 <div class="content-item">
                   <div class="content-item__picture-container">
-                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture " />
                   </div>
                   <div class="content-item__description">
                     <h4 class="content-item__title">Педикюр</h4>
@@ -263,7 +263,7 @@
               <div class="col">
                 <div class="content-item">
                   <div class="content-item__picture-container">
-                    <img src="./content/images/manicure.png" alt="manicure" class="picture" />
+                    <img src="./content/images/manicure.png" alt="manicure" class="picture " />
                   </div>
                   <div class="content-item__description">
                     <h4 class="content-item__title">Парафинотерапия</h4>
@@ -502,45 +502,55 @@
           <p class="masters__subtitle">
             Дружная команда настоящих профессионалов
           </p>
-          <div class="content-block">
-            <div class="content-item content-item_narrow">
-              <div class="picture-container picture-container_hoverable">
-                <img src="./content/images/irina.png" alt="master-irina" class="picture" />
+          <div class="container overflow-hidden p-0 ">
+            <div class="row g-3 row-cols-sm-4 row-cols-1">
+              <div class="col">
+                <div class="content-item content-item_narrow">
+                  <div class="picture-container picture-container_masters picture-container_hoverable">
+                    <img src="./content/images/irina.png" alt="master-irina" class="picture " />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Краснова Ирина</h4>
+                    <p class="content-item__subtitle">Мастер ногтевого сервиса</p>
+                    <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
+                  </div>
+                </div>
               </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Краснова Ирина</h4>
-                <p class="content-item__subtitle">Мастер ногтевого сервиса</p>
-                <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
+              <div class="col">
+                <div class="content-item content-item_narrow">
+                  <div class="picture-container picture-container_masters picture-container_hoverable">
+                    <img src="./content/images/janna.png" alt="master-irina" class="picture " />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Калилова Жанна</h4>
+                    <p class="content-item__subtitle">Визажист-стилист</p>
+                    <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="content-item content-item_narrow">
-              <div class="picture-container picture-container_hoverable">
-                <img src="./content/images/janna.png" alt="master-irina" class="picture" />
+              <div class="col">
+                <div class="content-item content-item_narrow">
+                  <div class="picture-container picture-container_masters picture-container_hoverable">
+                    <img src="./content/images/alina.png" alt="master-irina" class="picture " />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Киселёва Алина</h4>
+                    <p class="content-item__subtitle">Парикмахер</p>
+                    <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
+                  </div>
+                </div>
               </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Калилова Жанна</h4>
-                <p class="content-item__subtitle">Визажист-стилист</p>
-                <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
-              </div>
-            </div>
-            <div class="content-item content-item_narrow">
-              <div class="picture-container picture-container_hoverable">
-                <img src="./content/images/alina.png" alt="master-irina" class="picture" />
-              </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Киселёва Алина</h4>
-                <p class="content-item__subtitle">Парикмахер</p>
-                <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
-              </div>
-            </div>
-            <div class="content-item content-item_narrow">
-              <div class="picture-container picture-container_hoverable">
-                <img src="./content/images/elena.png" alt="master-irina" class="picture" />
-              </div>
-              <div class="content-item__description">
-                <h4 class="content-item__title">Иванова Елена</h4>
-                <p class="content-item__subtitle">Мастер ногтевого сервиса</p>
-                <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
+              <div class="col">
+                <div class="content-item content-item_narrow">
+                  <div class="picture-container picture-container_masters picture-container_hoverable">
+                    <img src="./content/images/elena.png" alt="master-irina" class="picture " />
+                  </div>
+                  <div class="content-item__description">
+                    <h4 class="content-item__title">Иванова Елена</h4>
+                    <p class="content-item__subtitle">Мастер ногтевого сервиса</p>
+                    <p class="content-item__experience">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -557,16 +567,16 @@
           </div>
           <div class="portfolio__content">
             <div class="portfolio__picture-container picture-container picture-container_hoverable">
-              <img src="./content/images/p1.png" alt="" class="picture" />
+              <img src="./content/images/p1.png" alt="" class="picture picture_portfolio" />
             </div>
             <div class="portfolio__picture-container picture-container picture-container_hoverable">
-              <img src="./content/images/p2.png" alt="" class="picture" />
+              <img src="./content/images/p2.png" alt="" class="picture picture_portfolio" />
             </div>
             <div class="portfolio__picture-container picture-container picture-container_hoverable">
-              <img src="./content/images/p3.png" alt="" class="picture" />
+              <img src="./content/images/p3.png" alt="" class="picture picture_portfolio" />
             </div>
             <div class="portfolio__picture-container picture-container picture-container_hoverable">
-              <img src="./content/images/p4.png" alt="" class="picture" />
+              <img src="./content/images/p4.png" alt="" class="picture picture_portfolio" />
             </div>
           </div>
         </div>
