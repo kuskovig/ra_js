@@ -382,6 +382,7 @@
 
 .picture {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   position: relative;
   border-radius: 8px;
@@ -563,7 +564,7 @@
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    margin-top: 100px;
+    margin-top:0;
   }
 
   &__content {
@@ -616,6 +617,10 @@
     border: 1px #d8d8d8 solid;
     padding: 15px;
   }
+}
+
+.slick-slide {
+  margin: 20px;
 }
 /* FOOTER STYLES */
 

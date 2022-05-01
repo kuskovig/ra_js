@@ -119,6 +119,27 @@ class TabsManager {
 }
 
 window.onload = function () {
-  const tabsElem = document.querySelector(".prices__content");
+  const tabsElem = document.querySelector('.prices__content');
   new TabsManager(tabsElem);
 };
+
+$(document).ready(function(){
+  $('.slider').slick({
+    draggable: true,
+    dots: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '.portfolio__btn_left',
+    nextArrow: '.portfolio__btn_right',
+    responsive: [
+      {
+        breakpoint: 780,
+        settings: {
+          verticalSwiping: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          vertical:true
+        }
+      }]
+  });
+});
