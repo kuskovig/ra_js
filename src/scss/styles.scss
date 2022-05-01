@@ -389,6 +389,14 @@
   &_brand {
     object-fit: contain;
   }
+
+  &_masters {
+    aspect-ratio: 0.85;
+  }
+
+  &_services {
+    aspect-ratio: 1.95;
+  }
 }
 
 .prices {
@@ -440,14 +448,6 @@
 }
 
 .picture-container {
-  &_services {
-    max-height: 200px;
-  }
-
-  &_masters {
-    max-height: 300px;
-  }
-
   &_hoverable {
     position: relative;
     cursor: pointer;
