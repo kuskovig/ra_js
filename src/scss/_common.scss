@@ -50,17 +50,11 @@ ul {
     background-color: $white-color;
   }
 }
-.container {
-  max-width: 1200px;
+.section-container {
+  max-width: 1100px;
   margin: auto;
   position: relative;
   padding: 0 20px;
-
-  /* &_row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }*/
 
   &_wide {
     max-width: 1440px;
