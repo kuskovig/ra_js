@@ -1,3 +1,5 @@
+import $ from "jquery/dist/jquery";
+
 const navTopBtn = document.querySelector(".btn.nav-top");
 const overlayMenu = document.querySelector(".header__top_overlay");
 const contactForm = document.querySelector(".contact-form__form");
@@ -122,7 +124,7 @@ window.onload = function () {
   new TabsManager(tabsElem);
 };
 
-$(document).ready(function () {
+function init() {
   $(".slider").slick({
     draggable: true,
     dots: true,
@@ -142,4 +144,6 @@ $(document).ready(function () {
       },
     ],
   });
-});
+}
+
+$(document).ready(init);
