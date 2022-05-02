@@ -672,7 +672,7 @@
               </p>
               <form class="contact-form__form">
                 <input type="text" name="name" class="input-name contact-form__input" placeholder="Ваше имя" />
-                <input type="tel" name="phone" class="input-phone contact-form__input"
+                <input type="tel" name="phone" inputmode="tel" class="input-phone contact-form__input"
                   placeholder="+7 (___) ___-__-__" />
                 <input type="submit" value="Записаться" class="btn btn_wide"></input>
               </form>
@@ -681,6 +681,40 @@
                 <a href="./content/dummy_personal-data-processing-policy.txt" target="_blank"
                   class="contact-form__policy blue-link">обработкой персональных данных</a>
               </p>
+            </div>
+            <div class="section__inner">
+              <form id="form-modal">
+                <div class="form-control">
+                  <label>Ваше имя:</label>
+                  <input type="text" inputmode="tel" name="name" placeholder="Ваше имя" required>
+                </div>
+
+                <div class="form-control">
+                  <label>Номер телефона:</label>
+                  <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+
+                <div class="form-control">
+                  <label>Выберите мастера</label>
+                  <select name="masterId">
+                      <option value="">Не выбран мастер</option>
+                  </select>
+                </div>
+
+                <div class="form-control">
+                  <label>Выберите услугу</label>
+                  <select name="serviceId">
+                      <option value="">Не выбрана услуга</option>
+                  </select>
+                </div>
+
+                <div class="form-control">
+                  <label>Дата визита:</label>
+                  <input type="date" name="visitDate">
+                </div>
+
+                <button>Записаться</button>
+              </form>
             </div>
           </div>
         </div>
@@ -709,11 +743,12 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="./js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/main.js"></script>
+    <script src="./main.min.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 /dist 
 /src/css
-/src/js/main.min.js
+/src/main.min.js
 
 # User-specific files
 *.rsuser
