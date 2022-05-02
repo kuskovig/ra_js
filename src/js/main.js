@@ -3,19 +3,18 @@ const overlayMenu = document.querySelector(".header__top_overlay");
 const contactForm = document.querySelector(".contact-form__form");
 const navMenu = document.querySelector(".nav-menu");
 const overlay = document.querySelector(".overlay");
-const aboutUsButtonsContainer = document.querySelector(".about-us__buttons-container");
-const aboutUsButtons = document.querySelectorAll(".about-us__button")
-const aboutUsMoretext = document.querySelector(".about-us__moretext")
-
-
-
+const aboutUsButtonsContainer = document.querySelector(
+  ".about-us__buttons-container"
+);
+const aboutUsButtons = document.querySelectorAll(".about-us__button");
+const aboutUsMoretext = document.querySelector(".about-us__moretext");
 
 aboutUsButtonsContainer.addEventListener("click", (event) => {
-  aboutUsButtons.forEach((button)=>{
-    button.classList.toggle("about-us__button_visible")
-  })
-  aboutUsMoretext.classList.toggle("about-us__moretext_visible")
-})
+  aboutUsButtons.forEach((button) => {
+    button.classList.toggle("about-us__button_visible");
+  });
+  aboutUsMoretext.classList.toggle("about-us__moretext_visible");
+});
 
 function toggleOverlayMenu() {
   overlay.classList.toggle("overlay_visible");
@@ -119,27 +118,28 @@ class TabsManager {
 }
 
 window.onload = function () {
-  const tabsElem = document.querySelector('.prices__content');
+  const tabsElem = document.querySelector(".prices__content");
   new TabsManager(tabsElem);
 };
 
-$(document).ready(function(){
-  $('.slider').slick({
+$(document).ready(function () {
+  $(".slider").slick({
     draggable: true,
     dots: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: '.portfolio__btn_left',
-    nextArrow: '.portfolio__btn_right',
+    prevArrow: ".portfolio__btn_left",
+    nextArrow: ".portfolio__btn_right",
     responsive: [
       {
-        breakpoint: 780,
+        breakpoint: 768,
         settings: {
           verticalSwiping: true,
           slidesToShow: 2,
-          slidesToScroll: 2,
-          vertical:true
-        }
-      }]
+          slidesToScroll: 1,
+          vertical: true,
+        },
+      },
+    ],
   });
 });
