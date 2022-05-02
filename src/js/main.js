@@ -1,6 +1,4 @@
-import $ from "jquery/dist/jquery";
 import { OrderForm } from "./forms/order-form";
-import { Fancybox } from "@fancyapps/fancybox/dist/jquery.fancybox.min";
 
 const navTopBtn = document.querySelector(".btn.nav-top");
 const overlayMenu = document.querySelector(".header__top_overlay");
@@ -58,8 +56,8 @@ navTopBtn.addEventListener("click", (event) => {
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", function (event) {
     event.preventDefault();
-    element = document.querySelector(this.getAttribute("href"));
-    offset = 60; /* header top background for mobile menu height*/
+    let element = document.querySelector(this.getAttribute("href"));
+    let offset = 60; /* header top background for mobile menu height*/
     window.scrollTo({
       top: element.getBoundingClientRect().top + window.pageYOffset - offset,
       behavior: "smooth",
@@ -146,6 +144,8 @@ function init() {
       },
     ],
   });
+  new OrderForm();
 }
+
 
 $(document).ready(init);

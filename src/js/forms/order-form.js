@@ -5,6 +5,7 @@ export class OrderForm {
     this.formEl = document.querySelector("#form-modal");
     this.mastersSelect = this.formEl.elements.masterId;
     this.servicesSelect = this.formEl.elements.serviceId;
+    this.loader = document.querySelector('.await-loader');
 
     this._init();
     this._bindEvents();
@@ -16,10 +17,15 @@ export class OrderForm {
   }
 
   _bindEvents() {
-    this.formEl.addEventListener("submit", (event) => {
+    this.formEl.addEventListener("submit", async (event) => {
       event.preventDefault();
       const data = new FormData(this.formEl);
-      data.forEach((value, key) => console.log(`${key}:${value}`));
+      this.loader.classList.toggle('visible');
+      let response = await ApiService.createOrder(Object.fromEntries(data));
+      this.loader.classList.toggle('visible');
+      //fancybox close modal
+
+      
     });
   }
 
