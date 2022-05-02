@@ -1,4 +1,6 @@
 import $ from "jquery/dist/jquery";
+import { OrderForm } from "./forms/order-form";
+import { Fancybox } from "@fancyapps/fancybox/dist/jquery.fancybox.min";
 
 const navTopBtn = document.querySelector(".btn.nav-top");
 const overlayMenu = document.querySelector(".header__top_overlay");
