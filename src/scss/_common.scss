@@ -13,6 +13,7 @@ body {
   font-size: 16px;
   color: #333;
   min-width: 320px;
+  line-height:1.15;
 }
 
 body,
@@ -27,32 +28,39 @@ a {
 
 ul {
   list-style-type: none;
-  padding-left: 0px;
-  margin: 0px;
+  padding-left: 0;
+  margin: 0;
 }
 
-section {
-  margin-bottom: 100px;
+.section {
+  &__inner {
+    &_row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  padding: 50px 0;
 
-  &:nth-last-child(1) {
-    margin-bottom: 0px;
+  &__title {
+    @extend .title;
   }
 
-  &.grey-bg {
-    background-color: #f8f6f7;
-    padding: 40px 0px;
+  &_grey-bg {
+    background-color: $white-color;
   }
 }
 .container {
   max-width: 1200px;
   margin: auto;
   position: relative;
+  padding: 0 20px;
 
-  &_row {
+  /* &_row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-  }
+    justify-content: space-between;
+  }*/
 
   &_wide {
     max-width: 1440px;
@@ -62,7 +70,7 @@ section {
 .title {
   font-size: 48px;
   font-weight: 700;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .wrapper {
