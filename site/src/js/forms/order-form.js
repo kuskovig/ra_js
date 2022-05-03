@@ -11,6 +11,7 @@ export class OrderForm {
     this.resultMessage = document.querySelector('.result-message')
     this.phoneField = this.formEl.elements.phone;
     this.nameField = this.formEl.elements.name;
+    this.allFormFields = document.querySelectorAll('.contact-form__input')
 
     this._init();
     this._bindEvents();
@@ -36,6 +37,7 @@ export class OrderForm {
 
       this.loader.classList.toggle('loader-spinner_visible');
       setTimeout(() => {
+        this.clearForm();
         Fancybox.close();
         this.resultMessage.classList.toggle('result-message_visible');
       }, "3000")
@@ -90,5 +92,11 @@ export class OrderForm {
     }
     return isNameValidated && isPhoneValidated && true;
   }
-  
+
+  clearForm() {
+    this.allFormFields.forEach(field => {
+      field.value = "";
+    })
+    }
+
 }
