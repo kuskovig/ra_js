@@ -631,6 +631,47 @@
 .slick-track {
   display: flex;
 }
+
+.contact-form__input_error{
+  border: red 2px solid;
+}
+
+.result-message {
+  margin: 20px auto;
+  position: absolute;
+  left: -99999px;
+  visibility: hidden;
+  
+  &_visible {
+    position: static;
+    visibility: visible;
+  }
+}
+.loader-spinner {
+  position: absolute;
+  left: -99999px;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #fb9475;
+  border-radius: 100%;
+  margin: 20px auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+
+  &_visible {
+    position: static;
+    visibility: visible;
+  }
+}
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
 /* FOOTER STYLES */
 
 .footer {

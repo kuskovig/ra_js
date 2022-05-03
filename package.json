@@ -20,7 +20,9 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.26",
     "gulp-cli": "^2.3.0",
+    "imask": "^6.4.2",
     "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   },
