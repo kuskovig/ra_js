@@ -1,0 +1,49 @@
+{
+  "name": "ra_js",
+  "version": "1.0.0",
+  "description": "beauty salon layout, html+css",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production  gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuskovig/ra_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuskovig/ra_js/issues"
+  },
+  "homepage": "https://github.com/kuskovig/ra_js#readme",
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.26",
+    "gulp-cli": "^2.3.0",
+    "imask": "^6.4.2",
+    "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.3",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "autoprefixer": "^10.4.6",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.9",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.13",
+    "sass": "^1.49.11",
+    "webpack": "^5.72.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
